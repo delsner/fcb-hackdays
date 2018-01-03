@@ -1,6 +1,4 @@
-# Webapp Starter with Flask REST API Backend and MongoDB
-
-NOTE: There could occur problems running this on windows.
+# FCB Hackdays - DHL Track 
 
 ## Development web backend/frontend
 
@@ -36,4 +34,3 @@ All calls made to `/api` will be proxied to backend server (default port for bac
 ## Production web backend/frontend
 
 Run `docker-compose up` in root. Will start four containers (mongodb, backend, frontend, nginx). 
-# fcb-hackdays
