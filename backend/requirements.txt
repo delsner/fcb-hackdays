@@ -1,3 +1,13 @@
-flask
-numpy
-pymongo
+argh==0.26.2
+click==6.7
+Flask==0.12.2
+Flask-JWT-Simple==0.0.3
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+pathtools==0.1.2
+PyJWT==1.5.3
+pymongo==3.6.0
+PyYAML==3.12
+watchdog==0.8.3
+Werkzeug==0.14.1
