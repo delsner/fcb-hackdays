@@ -24,7 +24,7 @@ export class QuizComponent implements OnInit {
 
     constructor(private quizService: QuizService,
                 private router: Router) {
-
+        //TODO: reroute if not ok here
     }
 
     ngOnInit() {

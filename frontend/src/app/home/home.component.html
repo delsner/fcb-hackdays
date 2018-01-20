@@ -1,31 +1,36 @@
-
-    <div class="home__top-image" fxLayoutAlign="center center">
-        <div class="home__top-header">
-            <h1>{{'home.mainSlogan' | translate}}</h1>
+<div class="home__top-image" fxLayoutAlign="center center">
+    <div class="home__top-header">
+        <h1>{{'home.mainSlogan' | translate}}</h1>
+        <div fxLayoutAlign="center center">
+            <img class="home__jersey-img" src="assets/images/fcb_trikot.png"/>
         </div>
     </div>
-    
-    <div fxLayout="column" fxLayoutAlign="center center" class="padding--xl">
-        
-        <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="center center">
-                    <p class="bold">{{'home.quizDescriptionHead' | translate}}</p>
-                    <p>{{'home.quizDescriptionSubhead' | translate}}</p>
-                <!-- <img class="home__jersey-img" src="assets/images/fcb_trikot.png"/> -->
-            </div>
-            
-        
-        <div fxLayout="column" class="padding--md">
-            <mat-input-container dividerColor="warn">
-                <input matInput name="email" [(ngModel)]="email" placeholder="Email">
-            </mat-input-container>
-            <mat-checkbox name="terms" [(ngModel)]="termsAccepted">
-                {{ 'home.button.acceptTerms' | translate}}
-            </mat-checkbox>
-        </div>
+</div>
 
-        <button mat-raised-button class="margin--xl" color="warn" (click)="signup()">{{'home.button.startChallenge' | translate}}</button>        
+<div fxLayout="column" fxLayoutAlign="center center" class="padding--xl">
+
+    <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="center center">
+        <p class="bold">{{'home.quizDescriptionHead' | translate}}</p>
+
+        <p>{{'home.quizDescriptionSubhead' | translate}}</p>
+
 
     </div>
 
-    
-    
+
+    <div fxLayout="column" class="padding--md">
+        <mat-input-container dividerColor="warn">
+            <input matInput name="email" [(ngModel)]="email" placeholder="Email">
+        </mat-input-container>
+        <mat-checkbox name="terms" [(ngModel)]="termsAccepted">
+            <p class="padding-left--xs">{{ 'home.button.acceptTerms' | translate}}</p>
+        </mat-checkbox>
+    </div>
+
+    <button mat-raised-button class="margin--xl" color="warn" (click)="signup()">{{'home.button.startChallenge' |
+        translate}}
+    </button>
+
+</div>
+
+

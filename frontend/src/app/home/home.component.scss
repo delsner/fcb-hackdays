@@ -1,7 +1,7 @@
 @import '../shared/styles/main';
 
 .home__top-image {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     position: relative;
     background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
@@ -12,7 +12,7 @@
 
     &::after {
         content: "";
-        background-color: #233488;
+        background-color: $primary;
         opacity: 0.4;
         top: 0;
         left: 0;
@@ -24,7 +24,7 @@
 }
 
 .home__jersey-image {
-    margin-top:200px;
+    margin-top: 200px;
     height: 50px;
     background: url("/assets/images/fcb_trikot.png") no-repeat center center;
 }
@@ -67,5 +67,32 @@
             margin: $unit-xs
         }
     }
-    
+
+}
+
+.diagonal-box {
+    z-index: 1;
+    background-color: $warn;
+    opacity: 0.8;
+    height: 50px;
+    width: 100vw;
+    padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+
+    -webkit-transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    -o-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+
+    &.yellow {
+        background-color: $accent;
+    }
+}
+
+.diagonal-box > .diagonal-wrapper {
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    -o-transform: skewY(5deg);
+    transform: skewY(5deg);
 }
