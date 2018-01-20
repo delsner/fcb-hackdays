@@ -16,6 +16,7 @@ socketio = SocketIO(path='/api/socket-io', engineio_logger=True)
 # jwt manager
 jwt = JWTManager()
 
+
 def create_app(config_name):
     """
     Create a new flask application instance with config name
@@ -44,5 +45,9 @@ def create_app(config_name):
     # score API
     from server.api.score import score_api
     app.register_blueprint(score_api, url_prefix='/api/score')
+
+    # challenge API
+    from server.api.challenge import challenge_api
+    app.register_blueprint(challenge_api, url_prefix='/api/challenge')
 
     return app
