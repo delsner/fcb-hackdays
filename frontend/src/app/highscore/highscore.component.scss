@@ -1,6 +1,6 @@
-@import "../../shared/styles/main";
+@import "../shared/styles/main";
 
-.question__top-image {
+.highscore__top-image {
     height: 30vh;
     width: 100%;
     position: relative;
@@ -23,7 +23,7 @@
     }
 }
 
-.question__top-header {
+.highscore__top-header {
     color: $light-font-color;
     z-index: 3;
     text-align: center;
@@ -39,26 +39,27 @@
     }
 }
 
-.mat-figure {
+.highscore__table {
+    width: 500px;
+    max-width: 100%;
 
-    background-color: lightgrey;
-
-    .mat-button {
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: none;
         width: 100%;
-        height: 100%;
-    }
-}
 
-.answer-button {
-    background-color: lightgrey;
-}
-
-.answer-card {
-    height: 150px;
-    cursor: pointer;
-    background-color: $primary;
-    color: $light-font-color;
-    &:hover {
-        opacity: 0.5;
+        tr {
+            border-bottom: 1px solid rgba(0, 0, 0, .12);
+            height: 48px;
+            text-align: left;
+            th {
+                color: rgba(0, 0, 0, .54);
+            }
+            th, td  {
+                border: none;
+                padding: 0 $unit-sm;
+            }
+        }
     }
 }

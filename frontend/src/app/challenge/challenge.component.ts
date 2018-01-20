@@ -37,7 +37,7 @@ export class ChallengeComponent implements OnInit, OnDestroy {
     }
 
     public onSubmittedChallenge() {
-        let dialogRef = this.dialog.open(ChallengeSubmitDialog, {
+        /*let dialogRef = this.dialog.open(ChallengeSubmitDialog, {
             width: '250px',
             data: {score: 1000}
         });
@@ -45,7 +45,7 @@ export class ChallengeComponent implements OnInit, OnDestroy {
         dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');
 
-        });
+        });*/
 
     }
 }
