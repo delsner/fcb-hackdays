@@ -3,9 +3,9 @@
         <h3>{{'home.quizDescription' | translate}}</h3>
         <img src="assets/images/fcb_trikot_home.png"/>
         <div fxLayout="column">
-            <mat-form-field>
+            <mat-input-container dividerColor="warn">
                 <input matInput name="email" [(ngModel)]="email" placeholder="Email">
-            </mat-form-field>
+            </mat-input-container>
             <mat-checkbox name="terms" [(ngModel)]="termsAccepted">
                 {{ 'home.button.acceptTerms' | translate}}
             </mat-checkbox>
