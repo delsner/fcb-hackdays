@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ChallengeService} from "../shared/services/challenge.service";
+import {QuizService} from "../shared/services/quiz.service";
 import {Quiz} from "../shared/models/Quiz";
 import {Question} from "../shared/models/Question";
 
@@ -8,7 +8,6 @@ import {Question} from "../shared/models/Question";
     selector: 'quiz',
     templateUrl: 'quiz.component.html'
 })
-
 
 export class QuizComponent implements OnInit {
 

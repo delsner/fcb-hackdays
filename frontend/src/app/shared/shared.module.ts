@@ -1,4 +1,4 @@
-import { TranslateModule } from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -13,7 +13,8 @@ import {
     MatListModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -22,7 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
-import {ChallengeService} from "./services/challenge.service";
+import {QuizService} from "./services/quiz.service";
 
 @NgModule({
     imports: [
@@ -34,6 +35,7 @@ import {ChallengeService} from "./services/challenge.service";
         // Material Modules
         FlexLayoutModule,
         MatTooltipModule,
+        MatGridListModule,
         MatButtonModule,
         MatCardModule,
         MatDialogModule,
@@ -60,6 +62,7 @@ import {ChallengeService} from "./services/challenge.service";
         MatDialogModule,
         MatInputModule,
         MatIconModule,
+        MatGridListModule,
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
@@ -76,7 +79,7 @@ import {ChallengeService} from "./services/challenge.service";
         HttpService,
         SocketService,
         AuthGuard,
-        ChallengeService
+        QuizService
     ]
 })
 export class SharedModule {

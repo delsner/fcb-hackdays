@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
     public email: string = '';
     public termsAccepted: boolean = true;
 
-    constructor(private translate: TranslateService,
-                private authService: AuthService,
+    constructor(private authService: AuthService,
                 private router: Router) {
     }
 

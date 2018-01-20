@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask_jwt_simple import JWTManager
 from flask_socketio import SocketIO
 from flask_pymongo import PyMongo
+import json
 
 # local imports
 from instance.config import app_config
@@ -46,8 +47,16 @@ def create_app(config_name):
     from server.api.score import score_api
     app.register_blueprint(score_api, url_prefix='/api/score')
 
+    # quiz API
+    from server.api.quiz import quiz_api
+    app.register_blueprint(quiz_api, url_prefix='/api/quiz')
+
     # challenge API
     from server.api.challenge import challenge_api
     app.register_blueprint(challenge_api, url_prefix='/api/challenge')
+
+    # admin API
+    from server.api.admin import admin_api
+    app.register_blueprint(admin_api, url_prefix='/api/admin')
 
     return app

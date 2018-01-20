@@ -1,8 +1,26 @@
-<mat-card>
-
+<div class="question-text">
     {{question.text}}
+</div>
 
-    <button *ngFor="let answer of question.answers; let i = index" (click)="submitAnswer(i)" mat-button>
-        {{answer.text}}
-    </button>
-</mat-card>
+<mat-grid-list cols="2" rowHeight="2:1" gutterSize="10px">
+    <mat-grid-tile>
+        <button (click)="submitAnswer(0)" mat-button>
+            {{question.answers[0].text}}
+        </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button (click)="submitAnswer(1)" mat-button>
+            {{question.answers[1].text}}
+        </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button (click)="submitAnswer(2)" mat-button>
+            {{question.answers[2].text}}
+        </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button (click)="submitAnswer(3)" mat-button>
+            {{question.answers[3].text}}
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>
