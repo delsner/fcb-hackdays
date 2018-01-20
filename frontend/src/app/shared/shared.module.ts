@@ -1,4 +1,4 @@
-import { TranslateModule } from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -13,7 +13,8 @@ import {
     MatListModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -34,6 +35,7 @@ import {ChallengeService} from "./services/challenge.service";
         // Material Modules
         FlexLayoutModule,
         MatTooltipModule,
+        MatGridListModule,
         MatButtonModule,
         MatCardModule,
         MatDialogModule,
@@ -60,6 +62,7 @@ import {ChallengeService} from "./services/challenge.service";
         MatDialogModule,
         MatInputModule,
         MatIconModule,
+        MatGridListModule,
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
