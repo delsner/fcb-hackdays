@@ -7,7 +7,9 @@ Jinja2==2.10
 MarkupSafe==1.0
 pathtools==0.1.2
 PyJWT==1.5.3
-pymongo==3.6.0
 PyYAML==3.12
 watchdog==0.8.3
 Werkzeug==0.14.1
+Flask-PyMongo==0.5.1
+flask-socketio==2.9.3
+flask-cors==3.0.3

@@ -1,6 +1,6 @@
 version: "3"
 services:
-  backend:
+ backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -13,16 +13,13 @@ services:
       - db
     links:
       - db
-  db:
+ db:
     image: mongo:3.4.0
     container_name: "mongodb"
+    env_file:
+      - .env
     volumes:
         - ./docker-entrypoint.sh:/entrypoint.sh
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: admin
-      MONGO_INITDB_DATABASE: db
-      MONGO_INITDB_COLLECTION: board
     ports:
       - "27017:27017"
     command: mongod --auth
