@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import {Component, Input, OnInit} from '@angular/core';
 import {NavigationItem} from "../main-layout.types";
 

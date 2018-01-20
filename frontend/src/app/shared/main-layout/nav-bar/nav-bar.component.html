@@ -8,7 +8,7 @@
             <nav fxLayout="row" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
                 <a *ngFor="let item of menuItems" [routerLink]="item.route"
                    routerLinkActive="navigation-item--active"
-                   class="navigation-item">{{item.name}}</a>
+                   class="navigation-item">{{'navigation.'+item.name | translate}}</a>
             </nav>
         </div>
         <div fxFlex fxLayoutAlign="end center">
@@ -23,6 +23,6 @@
     <button *ngFor="let item of menuItems" mat-menu-item
             [routerLink]="item.route"
             routerLinkActive="navigation-item-menu--active">
-        <span>{{item.name}}</span>
+        <span>{{'navigation.'+item.name | translate}}</span>
     </button>
 </mat-menu>
