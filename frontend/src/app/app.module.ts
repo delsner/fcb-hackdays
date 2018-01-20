@@ -1,39 +1,40 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {AppComponent} from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {PreloadAllModules, RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
-import {HomeComponent} from "./home/home.component";
+import {HomeComponent} from "./shared/home/home.component";
+import {QuizComponent} from "./shared/quiz/quiz.component";
+import {ChallengeService} from "./shared/services/challenge.service";
+import {HttpClientModule} from "@angular/common/http";
+import {QuestionComponents} from "./shared/quiz/question/question.component";
+import {ChallengeComponent} from "./shared/challenge/challenge.component";
+import {ChallengeSubmitDialog} from "./shared/dialog/challenge-submit-dialog";
 
-export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
-}
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        QuizComponent,
+        ChallengeComponent,
+        QuestionComponents,
+        ChallengeSubmitDialog
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         RouterModule.forRoot(ROUTES, {useHash: false, preloadingStrategy: PreloadAllModules}),
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),   
-        SharedModule
+        SharedModule,
     ],
-    providers: [],
+    entryComponents: [
+        ChallengeSubmitDialog,
+    ],
+    providers: [ChallengeService],
     bootstrap: [
         AppComponent]
 })

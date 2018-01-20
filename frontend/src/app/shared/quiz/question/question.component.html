@@ -1,0 +1,8 @@
+<mat-card>
+
+    {{question.text}}
+
+    <button *ngFor="let answer of question.answers; let i = index" (click)="submitAnswer(i)" mat-button>
+        {{answer.text}}
+    </button>
+</mat-card>
