@@ -7,8 +7,6 @@ tps3_qcontrol/airflow/logs/*
 tps3_qcontrol/__pycache__
 *.bmp
 *.BMP
-*.jpg
-*.JPG
 *.pid
 *.csv
 
