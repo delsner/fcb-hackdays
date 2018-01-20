@@ -1,0 +1,28 @@
+<mat-toolbar>
+    <div fxFlex fxLayout="row">
+        <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" routerLink="/">
+            <img [src]="logoUrl" height="30">
+            <a class="padding-left--sm">{{title}}</a>
+        </div>
+        <div fxFlex *ngIf="!hasSideNav">
+            <nav fxLayout="row" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
+                <a *ngFor="let item of menuItems" [routerLink]="item.route"
+                   routerLinkActive="navigation-item--active"
+                   class="navigation-item">{{item.name}}</a>
+            </nav>
+        </div>
+        <div fxFlex fxLayoutAlign="end center">
+            <button fxShow fxHide.gt-sm mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="md-18">menu</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button *ngFor="let item of menuItems" mat-menu-item
+            [routerLink]="item.route"
+            routerLinkActive="navigation-item-menu--active">
+        <span>{{item.name}}</span>
+    </button>
+</mat-menu>
