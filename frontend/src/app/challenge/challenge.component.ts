@@ -25,7 +25,7 @@ export class ChallengeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        // TODO fix naming
+        // TODO fix n
         this.challengeSub = this.quizService.getLatestQuiz().subscribe(
             (result) => {
                 this.quiz = result;

@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {QuizService} from "../shared/services/quiz.service";
 import {Quiz} from "../shared/models/Quiz";
 import {Question} from "../shared/models/Question";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,7 @@ import {Question} from "../shared/models/Question";
 
 export class QuizComponent implements OnInit {
 
-    @Input() data: Quiz;
+    @Input() data: any;
 
     @Output() submitted: EventEmitter<boolean> = new EventEmitter();
 
@@ -21,7 +22,8 @@ export class QuizComponent implements OnInit {
 
     public actQuestion: Question;
 
-    constructor() {
+    constructor(private quizService: QuizService,
+                private router: Router) {
 
     }
 
@@ -44,6 +46,8 @@ export class QuizComponent implements OnInit {
     }
 
     public submitQuiz() {
-        console.log(this.userAnswers);
+        this.quizService.verifyQuiz(this.data._id.$oid, this.userAnswers).subscribe((res) => {
+            this.router.navigateByUrl('/highscore');
+        });
     }
 }
