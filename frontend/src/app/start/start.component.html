@@ -1,37 +1,21 @@
-<div class="header-image-steps">
+<div class="start__header">
 
 </div>
 
-<mat-grid-list cols="4" rowHeight="150px;">
+<div fxLayout="column">
+    <div *ngFor="let step of steps; let i = index;"
+         class="start__container" fxLayout="row">
+        <div>
+            <div class="start__number" fxLayoutAlign="center center">
+                {{i + 1}}
+            </div>
+        </div>
+        <div class="start__content padding-horizontal--md">
+            {{step}}
+        </div>
+    </div>
+</div>
 
-    <mat-grid-tile
-        [colspan]=1>
-        <span class="start-number">1</span>
-    </mat-grid-tile>
-    <mat-grid-tile class="start-text"
-        [colspan]=3>
-        Das ist ein Text
-    </mat-grid-tile>
-
-
-    <mat-grid-tile
-        [colspan]=1>
-        <span class="start-number">2</span>
-    </mat-grid-tile>
-    <mat-grid-tile class="start-text"
-        [colspan]=3>
-        Das ist ein Text
-    </mat-grid-tile>
-
-
-    <mat-grid-tile
-        [colspan]=1>
-        <span class="start-number">3</span>
-    </mat-grid-tile>
-    <mat-grid-tile class="start-text"
-        [colspan]=3>
-        Das ist ein Text
-    </mat-grid-tile>
-</mat-grid-list>
-
-<a (click)="checkParticipation()" class="fancy-button pop-onhover bg-gradient1 start-fancy-button"><span>Starte das Quiz!</span></a>
+<div class="start__actions" fxLayout="column">
+    <a (click)="checkParticipation()" class="fancy-button pop-onhover bg-gradient1 start-fancy-button"><span>Starte das Quiz!</span></a>
+</div>

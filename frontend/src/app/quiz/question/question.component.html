@@ -1,26 +1,24 @@
-<div class="question-text">
-    {{question.text}}
+<div class="question__top-image" fxLayoutAlign="center center">
+    <div class="question__top-header">
+        <h1>{{question.text}}</h1>
+    </div>
 </div>
 
-<mat-grid-list cols="2" rowHeight="2:1" gutterSize="10px">
-    <mat-grid-tile class="answer-button">
-        <button (click)="submitAnswer(0)" mat-button >
+<div fxLayout="column" class="full-width full-height padding--md">
+    <div fxLayout="row" fxFlex class="padding--xs">
+        <div class="answer-card card padding--sm" (click)="submitAnswer(0)" fxFlex fxLayoutAlign="center center">
             {{question.answers[0].text}}
-        </button>
-    </mat-grid-tile>
-    <mat-grid-tile class="answer-button">
-        <button (click)="submitAnswer(1)" mat-button>
+        </div>
+        <div class="answer-card card padding--sm margin-left--xs" (click)="submitAnswer(1)" fxFlex fxLayoutAlign="center center">
             {{question.answers[1].text}}
-        </button>
-    </mat-grid-tile>
-    <mat-grid-tile class="answer-button">
-        <button (click)="submitAnswer(2)" mat-button>
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex class="padding--xs">
+        <div class="answer-card card padding--sm" (click)="submitAnswer(2)" fxFlex fxLayoutAlign="center center">
             {{question.answers[2].text}}
-        </button>
-    </mat-grid-tile>
-    <mat-grid-tile class="answer-button">
-        <button (click)="submitAnswer(3)" mat-button>
+        </div>
+        <div class="answer-card card padding--sm margin-left--xs" (click)="submitAnswer(3)" fxFlex fxLayoutAlign="center center">
             {{question.answers[3].text}}
-        </button>
-    </mat-grid-tile>
-</mat-grid-list>
+        </div>
+    </div>
+</div>
