@@ -18,12 +18,12 @@ export class AppComponent {
 
     constructor(private router: Router, translate: TranslateService) {
 
-        this.menuItems = ROUTES.map((route) => {
-            return {
-                name: route.component && route.data.title,
-                route: route.path
-            };
-        }).slice(0, ROUTES.length - 1);
+        this.menuItems = [
+            {
+                name: 'Home',
+                route: 'home'
+            }
+        ]
 
          // this language will be used as a fallback when a translation isn't found in the current language
         translate.setDefaultLang('en');
