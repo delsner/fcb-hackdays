@@ -10,11 +10,12 @@ import {ROUTES} from "./app.routes";
 import {HomeComponent} from "./home/home.component";
 import {StartComponent} from "./start/start.component";
 import {QuizComponent} from "./quiz/quiz.component";
-import {ChallengeService} from "./shared/services/challenge.service";
+import {QuizService} from "./shared/services/quiz.service";
 import {HttpClientModule, HttpClient} from "@angular/common/http";
 import {QuestionComponents} from "./quiz/question/question.component";
 import {ChallengeComponent} from "./challenge/challenge.component";
 import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
+import {HighscoreComponent} from "./highscore/highscore.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -28,7 +29,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         StartComponent,
         ChallengeComponent,
         QuestionComponents,
-        ChallengeSubmitDialog
+        ChallengeSubmitDialog,
+        HighscoreComponent
     ],
     imports: [
         BrowserModule,
@@ -47,7 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     entryComponents: [
         ChallengeSubmitDialog,
     ],
-    providers: [ChallengeService],
+    providers: [QuizService],
     bootstrap: [
         AppComponent]
 })

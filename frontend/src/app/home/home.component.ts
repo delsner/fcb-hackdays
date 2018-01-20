@@ -5,7 +5,8 @@ import {Router} from "@angular/router";
 
 @Component({
     selector: 'home',
-    templateUrl: 'home.component.html'
+    templateUrl: 'home.component.html',
+    styleUrls:['./home.component.scss']
 })
 
 export class HomeComponent implements OnInit {
@@ -13,8 +14,7 @@ export class HomeComponent implements OnInit {
     public email: string = '';
     public termsAccepted: boolean = true;
 
-    constructor(private translate: TranslateService,
-                private authService: AuthService,
+    constructor(private authService: AuthService,
                 private router: Router) {
     }
 

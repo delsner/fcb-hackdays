@@ -23,7 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
-import {ChallengeService} from "./services/challenge.service";
+import {QuizService} from "./services/quiz.service";
 
 @NgModule({
     imports: [
@@ -79,7 +79,7 @@ import {ChallengeService} from "./services/challenge.service";
         HttpService,
         SocketService,
         AuthGuard,
-        ChallengeService
+        QuizService
     ]
 })
 export class SharedModule {

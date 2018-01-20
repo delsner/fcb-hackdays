@@ -30,6 +30,10 @@ export class AppComponent {
                     }, {
                         name: 'Quiz',
                         route: 'quiz'
+                    },
+                    {
+                        name: 'Highscore',
+                        route: 'highscore'
                     }
                 ];
             } else {
@@ -40,7 +44,7 @@ export class AppComponent {
         translate.setDefaultLang('en');
 
         // the lang to use, if the lang isn't available, it will use the current loader to get them
-        translate.use('de');
+        translate.use('en');
 
     }
 
