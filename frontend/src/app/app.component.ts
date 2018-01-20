@@ -30,6 +30,10 @@ export class AppComponent {
                     }, {
                         name: 'Quiz',
                         route: 'quiz'
+                    },
+                    {
+                        name: 'Highscore',
+                        route: 'highscore'
                     }
                 ];
             } else {

@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import 'rxjs/add/operator/filter';
-import {ChallengeService} from "../shared/services/challenge.service";
+import {QuizService} from "../shared/services/quiz.service";
 import {Quiz} from "../shared/models/Quiz";
 import {Subscription} from "rxjs";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
@@ -18,14 +18,15 @@ export class ChallengeComponent implements OnInit, OnDestroy {
 
     private challengeSub: Subscription;
 
-    constructor(private challengeService: ChallengeService,
+    constructor(private quizService: QuizService,
                 public dialog: MatDialog,
                 private router: Router) {
 
     }
 
     ngOnInit() {
-        this.challengeSub = this.challengeService.getChallenge().subscribe(
+        // TODO fix naming
+        this.challengeSub = this.quizService.getLatestQuiz().subscribe(
             (result) => {
                 this.quiz = result;
             });
@@ -36,11 +37,9 @@ export class ChallengeComponent implements OnInit, OnDestroy {
     }
 
     public onSubmittedChallenge() {
-        console.log("test");
-
         let dialogRef = this.dialog.open(ChallengeSubmitDialog, {
             width: '250px',
-            data: { score: 1000 }
+            data: {score: 1000}
         });
 
         dialogRef.afterClosed().subscribe(result => {
