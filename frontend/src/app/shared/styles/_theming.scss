@@ -1,20 +1,20 @@
 @import '~@angular/material/theming';
 
 $dark-gray: (
-    50 : #e5e6e7,
-    100 : #bfc1c3,
-    200 : #94979b,
-    300 : #696d72,
-    400 : #494e54,
-    500 : #292f36,
-    600 : #242a30,
-    700 : #1f2329,
-    800 : #191d22,
-    900 : #0f1216,
-    A100 : #5b9dff,
-    A200 : #287eff,
-    A400 : #0062f4,
-    A700 : #0057da,
+    50 : #e5e5e5,
+    100 : #bebebe,
+    200 : #939393,
+    300 : #676767,
+    400 : #474747,
+    500 : #262626,
+    600 : #222222,
+    700 : #1c1c1c,
+    800 : #171717,
+    900 : #0d0d0d,
+    A100 : #eb6969,
+    A200 : #e53c3c,
+    A400 : #ee0000,
+    A700 : #d40000,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -33,21 +33,21 @@ $dark-gray: (
     )
 );
 
-$light-green: (
-    50 : #eaf9f8,
-    100 : #caf0ed,
-    200 : #a7e6e2,
-    300 : #83dcd6,
-    400 : #69d5cd,
-    500 : #4ecdc4,
-    600 : #47c8be,
-    700 : #3dc1b6,
-    800 : #35baaf,
-    900 : #25aea2,
-    A100 : #ebfffd,
-    A200 : #b8fff8,
-    A400 : #85fff3,
-    A700 : #6cfff0,
+$light-yellow: (
+    50 : #faf6f0,
+    100 : #f2e8da,
+    200 : #e9d8c2,
+    300 : #e0c8a9,
+    400 : #dabd96,
+    500 : #d3b184,
+    600 : #ceaa7c,
+    700 : #c8a171,
+    800 : #c29867,
+    900 : #b78854,
+    A100 : #ffffff,
+    A200 : #fff3e7,
+    A400 : #ffdab4,
+    A700 : #ffce9b,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -67,30 +67,30 @@ $light-green: (
 );
 
 $red: (
-    50 : #ffeded,
-    100 : #ffd3d3,
-    200 : #ffb5b5,
-    300 : #ff9797,
-    400 : #ff8181,
-    500 : #ff6b6b,
-    600 : #ff6363,
-    700 : #ff5858,
-    800 : #ff4e4e,
-    900 : #ff3c3c,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffe5e5,
-    A700 : #ffcbcb,
+    50 : #fce8e4,
+    100 : #f7c5bd,
+    200 : #f29f91,
+    300 : #ec7864,
+    400 : #e85b43,
+    500 : #e43e22,
+    600 : #e1381e,
+    700 : #dd3019,
+    800 : #d92814,
+    900 : #d11b0c,
+    A100 : #fffdfc,
+    A200 : #ffccc9,
+    A400 : #ff9c96,
+    A700 : #ff847d,
     contrast: (
         50 : #000000,
         100 : #000000,
         200 : #000000,
         300 : #000000,
         400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
         900 : #ffffff,
         A100 : #000000,
         A200 : #000000,
@@ -101,7 +101,7 @@ $red: (
 
 @include mat-core();
 $app-primary: mat-palette($dark-gray);
-$app-accent: mat-palette($light-green);
+$app-accent: mat-palette($light-yellow);
 $app-warn: mat-palette($red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include angular-material-theme($app-theme);
