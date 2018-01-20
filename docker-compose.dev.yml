@@ -5,6 +5,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: "backend"
+    env_file:
+      - .env
     volumes:
         - ./backend:/app # for watching files
     ports:
