@@ -11,7 +11,7 @@
                    class="navigation-item">{{'navigation.'+item.name | translate}}</a>
             </nav>
         </div>
-        <div fxFlex fxLayoutAlign="end center">
+        <div fxFlex fxLayoutAlign="end center" *ngIf="menuItems && menuItems.length > 0">
             <button fxShow fxHide.gt-sm mat-icon-button [matMenuTriggerFor]="menu">
                 <mat-icon class="md-18">menu</mat-icon>
             </button>
