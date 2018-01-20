@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -39,7 +40,7 @@ import {SocketService} from "./services/socket.service";
         MatSnackBarModule,
         MatSelectModule,
         // custom modules
-        MainLayoutModule,
+        MainLayoutModule
     ],
     exports: [
         CommonModule,
@@ -58,8 +59,10 @@ import {SocketService} from "./services/socket.service";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        // translate module
+        TranslateModule,
         // custom modules
-        MainLayoutModule,
+        MainLayoutModule
     ],
     declarations: [],
     entryComponents: [],

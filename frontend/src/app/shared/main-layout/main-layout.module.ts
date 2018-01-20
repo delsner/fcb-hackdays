@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 
 import {MainLayoutComponent} from './main-layout.component';
@@ -17,7 +18,8 @@ import {SideNavComponent} from "./side-nav/side-nav.component";
         MatButtonModule,
         MatIconModule,
         MatListModule,
-        MatToolbarModule
+        MatToolbarModule,
+        TranslateModule
     ],
     exports: [
         MainLayoutComponent,
