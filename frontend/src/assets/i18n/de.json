@@ -6,7 +6,8 @@
     },
     "home": {
         "mainSlogan": "Werde Mitglied der globalen FC Bayern Familie!",
-        "quizDescription": "Beweise dein Wissen im FC Bayern Quiz und gewinne mit etwas Glück das aktuelle Trikot der Bayern",
+        "quizDescriptionHead": "Zeig dein Wissen über den FC Bayern.",
+        "quizDescriptionSubhead": "Gewinne das Quiz und erhalte dein Trikot von DHL.",
         "button": {
             "startChallenge": "Quiz starten",
             "acceptTerms": "Ich akzeptiere die Nutzungsbedingungen"
