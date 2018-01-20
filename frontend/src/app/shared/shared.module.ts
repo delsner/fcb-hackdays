@@ -20,6 +20,7 @@ import {HttpService} from './services/http.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
+import {AuthGuard} from "./services/auth.guard";
 
 @NgModule({
     imports: [
@@ -69,7 +70,8 @@ import {SocketService} from "./services/socket.service";
     providers: [
         AuthService,
         HttpService,
-        SocketService
+        SocketService,
+        AuthGuard
     ]
 })
 export class SharedModule {
