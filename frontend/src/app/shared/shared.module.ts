@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -18,6 +19,7 @@ import {AuthService} from './services/auth.service';
 import {HttpService} from './services/http.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
+import {SocketService} from "./services/socket.service";
 
 @NgModule({
     imports: [
@@ -38,7 +40,7 @@ import {MainLayoutModule} from "./main-layout/main-layout.module";
         MatSnackBarModule,
         MatSelectModule,
         // custom modules
-        MainLayoutModule,
+        MainLayoutModule
     ],
     exports: [
         CommonModule,
@@ -57,14 +59,17 @@ import {MainLayoutModule} from "./main-layout/main-layout.module";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        // translate module
+        TranslateModule,
         // custom modules
-        MainLayoutModule,
+        MainLayoutModule
     ],
     declarations: [],
     entryComponents: [],
     providers: [
         AuthService,
-        HttpService
+        HttpService,
+        SocketService
     ]
 })
 export class SharedModule {

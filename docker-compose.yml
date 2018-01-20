@@ -23,6 +23,8 @@ services:
     build:
       context: ./backend
     container_name: "backend"
+    env_file:
+      - .env
     ports:
       - "8081:8081"
     depends_on:
@@ -30,15 +32,12 @@ services:
     links:
       - db
   db:
-    image: mongo
+    image: mongo:3.4.0
     container_name: "mongodb"
+    env_file:
+      - .env
     volumes:
         - ./docker-entrypoint.sh:/entrypoint.sh
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: admin
-      MONGO_INITDB_DATABASE: db
-      MONGO_INITDB_COLLECTION: board
     ports:
       - "27017:27017"
     command: mongod --auth

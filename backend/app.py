@@ -3,13 +3,14 @@ from pymongo import MongoClient
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from flask_jwt_simple import JWTManager, jwt_required, create_jwt, get_jwt_identity
+import os
 
 # mongodb config
-DB_HOST_MONGO = 'mongodb://db:27017/'
-DB_NAME_MONGO = "db"
-DB_COLLECTION_MONGO = "board"
-DB_USERNAME = 'root'
-DB_PASSWORD = 'admin'
+DB_NAME_MONGO = os.getenv('MONGO_INITDB_DATABASE')
+DB_HOST_MONGO = 'mongodb://{}:27017/'.format(DB_NAME_MONGO)
+DB_COLLECTION_MONGO = os.getenv('MONGO_INITDB_COLLECTION')
+DB_USERNAME = os.getenv('MONGO_INITDB_ROOT_USERNAME')
+DB_PASSWORD = os.getenv('MONGO_INITDB_ROOT_PASSWORD')
 
 # mongodb connection
 mongo_client = MongoClient(DB_HOST_MONGO)
@@ -21,8 +22,9 @@ collection = db[DB_COLLECTION_MONGO]
 app = Flask(__name__)
 
 # JWT config
-app.config['JWT_SECRET_KEY'] = 'super-secret'  # Change this!
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET')  # Change this!
 jwt = JWTManager(app)
+
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -43,8 +45,9 @@ def login():
         return jsonify({"msg": "Bad username or password"}), 401
 
     # Identity can be any data that is json serializable
-    jwt = {'jwt': create_jwt(identity=username)}
-    return jsonify(jwt), 200
+    ret = {'jwt': create_jwt(identity=username)}
+    return jsonify(ret), 200
+
 
 @app.route('/api/board/<board_id>', methods=['GET'])
 def get_single_board(board_id):
