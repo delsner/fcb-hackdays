@@ -16,6 +16,8 @@ import {QuestionComponents} from "./quiz/question/question.component";
 import {ChallengeComponent} from "./challenge/challenge.component";
 import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
 import {HighscoreComponent} from "./highscore/highscore.component";
+import {TermsComponent} from "./terms/terms.component";
+
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -30,7 +32,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         ChallengeComponent,
         QuestionComponents,
         ChallengeSubmitDialog,
-        HighscoreComponent
+        HighscoreComponent,
+        TermsComponent
     ],
     imports: [
         BrowserModule,

@@ -4,7 +4,7 @@
     height: 50vh;
     width: 100%;
     position: relative;
-    background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
+    background: url("/assets/images/arena.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,7 +13,7 @@
     &::after {
         content: "";
         background-color: $primary;
-        opacity: 0.4;
+        opacity: 0.7;
         top: 0;
         left: 0;
         bottom: 0;
@@ -33,16 +33,21 @@
     color: $light-font-color;
     z-index: 3;
     text-align: center;
-    font-weight: $font-bold;
     padding: $unit-md;
 
-    h1 {
-        font-size: $font-size-xlarge;
-        text-transform: uppercase;
-    }
     p {
         font-size: $font-regular;
     }
+}
+
+.text-red {
+    color: $warn;
+    font-weight: $font-bold
+}
+
+.text-yellow {
+    color: $accent;
+    font-weight: $font-bold    
 }
 
 .home__jersey-img {

@@ -1,26 +1,32 @@
 <div class="home__top-image" fxLayoutAlign="center center">
     <div class="home__top-header">
-        <h1>{{'home.mainSlogan' | translate}}</h1>
-        <div fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            
+            <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="start center">
+                    <p fxFlex>
+                         Show your knowledge about FC Bayern.
+                    </p>
+                    <p>
+                        Win the quiz and get 
+                        <span class="text-red">your jersey</span> delivered
+                        <span class="text-yellow">by DHL</span>
+                    </p>
+                </div>
             <img class="home__jersey-img" src="assets/images/fcb_trikot.png"/>
         </div>
     </div>
 </div>
 
-<div fxLayout="column" fxLayoutAlign="center center" class="padding--xl">
+<div fxLayout="column" fxLayoutAlign="center center" class="padding--md">
 
-    <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="center center">
-        <p class="bold">{{'home.quizDescriptionHead' | translate}}</p>
-
-        <p>{{'home.quizDescriptionSubhead' | translate}}</p>
-
-
+    <div class="home__quiz-description-container"> 
+        <p>DHL and FC Bayern – A truly global family</p> 
     </div>
 
 
     <div fxLayout="column" class="padding--md">
         <mat-input-container dividerColor="warn">
-            <input matInput name="email" [(ngModel)]="email" placeholder="Email">
+            <input matInput name="email" [(ngModel)]="email" placeholder="Your email to participate...">
         </mat-input-container>
         <mat-checkbox name="terms" [(ngModel)]="termsAccepted">
             <p class="padding-left--xs">{{ 'home.button.acceptTerms' | translate}}</p>

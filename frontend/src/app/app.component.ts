@@ -34,10 +34,17 @@ export class AppComponent {
                     {
                         name: 'Highscore',
                         route: 'highscore'
+                    },
+                    {
+                        name: 'Terms',
+                        route: 'terms'
                     }
                 ];
             } else {
-                this.menuItems = [];
+                this.menuItems = [{
+                    name: 'Terms',
+                    route: 'terms'
+                }];
             }
         });
         // this language will be used as a fallback when a translation isn't found in the current language
