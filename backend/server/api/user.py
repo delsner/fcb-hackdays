@@ -1,26 +1,33 @@
 from flask import Blueprint, make_response, jsonify, request
+from flask_jwt_simple import create_jwt
+from werkzeug.security import generate_password_hash, check_password_hash
 
-user_api = Blueprint('cluster_api', __name__)
+user_api = Blueprint('user_api', __name__)
+
+from server.app import mongo
 
 
-@user_api.route("/", methods=['GET'])
-def get_all_users():
-    #     clusters = User.get_all()
-    # results = jsonify(list(map(cluster_to_dict, clusters)))
-    return make_response({}), 200
+@user_api.route('/signup', methods=['POST'])
+def signup():
+    creds = request.get_json()  # {email}
+    res = {}
+
+    # if user does not exist create and store with init pw
+    if mongo.db.users.find_one({'email': creds['email']}) is None:
+        creds['password'] = generate_password_hash('init_pw')
+        user_id = mongo.db.users.insert_one(creds).inserted_id
+
+    res = {'jwt': create_jwt(identity=creds['email'])}
+    return jsonify(res), 200
+
 
 @user_api.route('/login', methods=['POST'])
 def login():
-    if not request.is_json:
-        return jsonify({"msg": "Missing JSON in request"}), 400
+    creds = request.get_json()  # {email, password}
+    user = mongo.db.users.find_one({'email': creds['email']})
+    res = {}
 
-    params = request.get_json()
-    user = request.get_json() #{username,password}
+    if check_password_hash(user['password'], creds['password']):
+        res = {'jwt': create_jwt(identity=user['email'])}
 
-    # TODO: search for user in db
-    if username != 'test' or password != 'test':
-        return jsonify({"msg": "Bad username or password"}), 401
-
-    # Identity can be any data that is json serializable
-    ret = {'jwt': create_jwt(identity=username)}
-    return jsonify(ret), 200
+    return jsonify(res), 200

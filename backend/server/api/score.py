@@ -9,6 +9,7 @@ from server.app import mongo
 from server.app import socketio
 
 @score_api.route("/", methods=['GET'])
+@jwt_required
 def get_all_scores():
     #     clusters = User.get_all()
     # results = jsonify(list(map(cluster_to_dict, clusters)))
@@ -19,6 +20,7 @@ def get_all_scores():
 
 
 @score_api.route("/", methods=['POST'])
+@jwt_required
 def create_score():
     score = request.get_json()
     score_id = mongo.db.scores.insert_one(score).inserted_id
