@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {PreloadAllModules, RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import {HomeComponent} from "./home/home.component";
+import {StartComponent} from "./start/start.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -18,7 +19,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        StartComponent
     ],
     imports: [
         BrowserModule,
@@ -30,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        }),   
+        }),
         SharedModule
     ],
     providers: [],

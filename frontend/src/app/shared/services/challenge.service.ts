@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class ChallengeService {
-    private domain: string = '/api/challenge';
+    private domain: string = 'api/challenge';
 
     constructor(private http: HttpService) {
     }

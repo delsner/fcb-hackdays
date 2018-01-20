@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="center center">  
+<div fxLayout="column" fxLayoutAlign="center center">
         <h1>{{'home.mainSlogan' | translate}}</h1>
         <h3>{{'home.quizDescription' | translate}}</h3>
         <img src="assets/images/fcb_trikot_home.png"/>
@@ -11,5 +11,5 @@
             </mat-checkbox>
         </div>
 
-        <button mat-raised-button color="warn">{{'home.button.startChallenge' | translate}}</button>
+        <button mat-raised-button color="warn" (click)="signup()">{{'home.button.startChallenge' | translate}}</button>
 </div>

@@ -1,4 +1,7 @@
 export class User {
-  public _id: string;
-  public email: string;
+    public email: string;
+
+    constructor(email: string) {
+        this.email = email;
+    }
 }

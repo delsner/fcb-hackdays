@@ -51,7 +51,7 @@ export class AuthService {
             .pipe(
                 map((response: any) => {
                     // login successful if there's a jwt token in the response
-                    const token = response && response.token;
+                    const token = response && response.jwt;
                     if (token) {
                         this.token = token;
                         localStorage.setItem('dhl-jwt', token);
@@ -89,7 +89,7 @@ export class AuthService {
         const token = localStorage.getItem('dhl-jwt');
         if (token) {
             console.log(this.parseToken(token));
-            return this.parseToken(token).user;
+            return new User(this.parseToken(token).sub);
         }
     }
 

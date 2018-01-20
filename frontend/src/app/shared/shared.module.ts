@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
+import {ChallengeService} from "./services/challenge.service";
 
 @NgModule({
     imports: [
@@ -74,7 +75,8 @@ import {AuthGuard} from "./services/auth.guard";
         AuthService,
         HttpService,
         SocketService,
-        AuthGuard
+        AuthGuard,
+        ChallengeService
     ]
 })
 export class SharedModule {

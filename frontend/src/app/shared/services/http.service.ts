@@ -19,7 +19,7 @@ export class HttpService {
         const options = {headers: headers, body: body};
         const pathEndpoint = endpoint ? `/${endpoint}` : '';
         const path = `${domain}${pathEndpoint}`;
-        return this.http.request(method, `${C.server}${path}${this.generateParams(params)}`, options)
+        return this.http.request(method, `${path}${this.generateParams(params)}`, options)
             .pipe(
                 map((response) => response)
             );

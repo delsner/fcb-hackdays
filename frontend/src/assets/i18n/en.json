@@ -1,6 +1,7 @@
-{   
+{
     "navigation": {
-        "home": "Home"
+        "home": "Home",
+        "Start": "Start"
      },
     "home": {
         "main-slogan": "Be part of the global FC Bayern family!"
