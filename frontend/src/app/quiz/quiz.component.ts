@@ -4,10 +4,10 @@ import {Quiz} from "../shared/models/Quiz";
 import {Question} from "../shared/models/Question";
 import {Router} from "@angular/router";
 
-
 @Component({
     selector: 'quiz',
-    templateUrl: 'quiz.component.html'
+    templateUrl: 'quiz.component.html',
+    styleUrls: ['quiz.component.scss']
 })
 
 export class QuizComponent implements OnInit {

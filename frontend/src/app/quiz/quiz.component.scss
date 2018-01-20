@@ -1,0 +1,18 @@
+
+.question-text {
+    font-size: 25px;
+    margin: 10px 0 25px 0;
+}
+
+
+@media (min-width: 1025px) {
+    .question-text {
+        text-align: center;
+    }
+    .mat-grid-list {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+
