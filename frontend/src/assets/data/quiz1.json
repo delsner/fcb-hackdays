@@ -1,0 +1,64 @@
+{
+    "name": "Das ist der Quizname",
+    "questions": [
+        {
+            "text": "1 Das ist eine Frage",
+            "answers": [
+                {
+                    "text": "answer 1"
+                },
+                {
+                    "text": "answer 2"
+                },
+                {
+                    "text": "answer 3"
+                },
+                {
+                    "text": "answer 4"
+                }
+            ]
+        },
+        {
+            "text": "2 Das ist eine Frage",
+            "answers": [
+                {
+                    "text": "answer 1"
+                },
+                {
+                    "text": "answer 2"
+                },
+                {
+                    "text": "answer 3"
+                }
+            ]
+        },
+        {
+            "text": "3 Das ist eine Frage",
+            "answers": [
+                {
+                    "text": "answer 1"
+                },
+                {
+                    "text": "answer 2"
+                },
+                {
+                    "text": "answer 3"
+                }
+            ]
+        },
+        {
+            "text": "4 Das ist eine Frage",
+            "answers": [
+                {
+                    "text": "answer 1"
+                },
+                {
+                    "text": "answer 2"
+                },
+                {
+                    "text": "answer 3"
+                }
+            ]
+        }
+    ]
+}

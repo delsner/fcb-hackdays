@@ -27,6 +27,9 @@ export class AppComponent {
                     {
                         name: 'Start',
                         route: 'start'
+                    }, {
+                        name: 'Quiz',
+                        route: 'quiz'
                     }
                 ];
             } else {

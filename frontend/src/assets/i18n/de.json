@@ -1,7 +1,8 @@
 {
     "navigation": {
         "Home": "Home",
-        "Start": "Start"
+        "Start": "Start",
+        "Quiz": "Quiz"
     },
     "home": {
         "mainSlogan": "Werde Mitglied der globalen FC Bayern Familie!",
