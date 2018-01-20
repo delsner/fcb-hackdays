@@ -43,8 +43,8 @@ def login():
         return jsonify({"msg": "Bad username or password"}), 401
 
     # Identity can be any data that is json serializable
-    ret = {'jwt': create_jwt(identity=username)}
-    return jsonify(ret), 200
+    jwt = {'jwt': create_jwt(identity=username)}
+    return jsonify(jwt), 200
 
 @app.route('/api/board/<board_id>', methods=['GET'])
 def get_single_board(board_id):
