@@ -3,7 +3,8 @@ import {QuizService} from "../shared/services/quiz.service";
 
 @Component({
     selector: 'highscore-component',
-    templateUrl: 'highscore.component.html'
+    templateUrl: 'highscore.component.html',
+    styleUrls: ['highscore.component.scss']
 })
 
 export class HighscoreComponent implements OnInit {
@@ -13,9 +14,11 @@ export class HighscoreComponent implements OnInit {
     constructor(private quizService: QuizService) {
         this.quizService.quiz.subscribe((quiz) => {
             this.quiz = quiz;
-            this.quizService.getTopScoresByQuiz(this.quiz._id.$oid).subscribe((scores) => {
-                this.scores = scores;
-            });
+            if (quiz) {
+                this.quizService.getTopScoresByQuiz(this.quiz._id.$oid).subscribe((scores) => {
+                    this.scores = scores;
+                });
+            }
         });
     }
 

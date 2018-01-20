@@ -1,6 +1,6 @@
 @import "../shared/styles/main";
 
-.question__top-image {
+.start__top-image {
     height: 30vh;
     width: 100%;
     position: relative;
@@ -23,7 +23,7 @@
     }
 }
 
-.question__top-header {
+.start__top-header {
     color: $light-font-color;
     z-index: 3;
     text-align: center;
