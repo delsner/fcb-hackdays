@@ -3,6 +3,11 @@
         "Home": "Home"
     },
     "home": {
-        "start": "Home"
+        "mainSlogan": "Werde Mitglied der globalen FC Bayern Familie!",
+        "quizDescription": "Beweise dein Wissen im FC Bayern Quiz und gewinne mit etwas Glück das aktuelle Trikot der Bayern",        
+        "button": {
+            "startChallenge": "Quiz starten",
+            "acceptTerms": "Ich akzeptiere die Nutzungsbedingungen"
+        }
     }
 }
