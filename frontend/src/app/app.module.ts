@@ -7,20 +7,34 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {PreloadAllModules, RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import {HomeComponent} from "./shared/home/home.component";
+import {QuizComponent} from "./shared/quiz/quiz.component";
+import {ChallengeService} from "./shared/services/challenge.service";
+import {HttpClientModule} from "@angular/common/http";
+import {QuestionComponents} from "./shared/quiz/question/question.component";
+import {ChallengeComponent} from "./shared/challenge/challenge.component";
+import {ChallengeSubmitDialog} from "./shared/dialog/challenge-submit-dialog";
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        QuizComponent,
+        ChallengeComponent,
+        QuestionComponents,
+        ChallengeSubmitDialog
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         RouterModule.forRoot(ROUTES, {useHash: false, preloadingStrategy: PreloadAllModules}),
         SharedModule,
     ],
-    providers: [],
+    entryComponents: [
+        ChallengeSubmitDialog,
+    ],
+    providers: [ChallengeService],
     bootstrap: [
         AppComponent]
 })
