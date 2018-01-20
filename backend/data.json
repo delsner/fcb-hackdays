@@ -1,70 +1,457 @@
 {
     "quizzes": [
         {
-            "name": "Das ist der Quizname",
+            "name": "Quizname",
             "answers": [
+                1,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1,
+                0,
+                3,
+                0,
+                3,
+                2,
+                0,
+                0,
+                3,
+                3,
+                1,
                 0,
                 1,
                 2,
-                3
+                3,
+                3,
+                1,
+                0,
+                2
             ],
             "questions": [
                 {
-                    "text": "1 Das ist eine Frage",
+                    "text": "Who is the head coach of FC Bayern?",
                     "answers": [
                         {
-                            "text": "answer 1"
+                            "text": "Ottmar Hitzfeld"
                         },
                         {
-                            "text": "answer 2"
+                            "text": "Jupp Heynckes"
                         },
                         {
-                            "text": "answer 3"
+                            "text": "Carlo Ancelotti"
                         },
                         {
-                            "text": "answer 4"
+                            "text": "Karl-Heinz Rummenigge"
                         }
                     ]
                 },
                 {
-                    "text": "2 Das ist eine Frage",
+                    "text": "When was FC Bayern founded?",
                     "answers": [
                         {
-                            "text": "answer 1"
+                            "text": "1920"
                         },
                         {
-                            "text": "answer 2"
+                            "text": "1905"
                         },
                         {
-                            "text": "answer 3"
+                            "text": "1900"
+                        },
+                        {
+                            "text": "1934"
                         }
                     ]
                 },
                 {
-                    "text": "3 Das ist eine Frage",
+                    "text": "Against whom did FC Bayern win the last Champions League title?",
                     "answers": [
                         {
-                            "text": "answer 1"
+                            "text": "Borussia Dortmund"
                         },
                         {
-                            "text": "answer 2"
+                            "text": "Real Madrid"
                         },
                         {
-                            "text": "answer 3"
+                            "text": "FC Barcelona"
+                        },
+                        {
+                            "text": "Inter Mailand"
                         }
                     ]
                 },
                 {
-                    "text": "4 Das ist eine Frage",
+                    "text": "What is the capacity of the Allianz Arena?",
                     "answers": [
                         {
-                            "text": "answer 1"
+                            "text": "64,000"
                         },
                         {
-                            "text": "answer 2"
+                            "text": "75,000"
                         },
                         {
-                            "text": "answer 3"
+                            "text": "69,000"
+                        },
+                        {
+                            "text": "70,250"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who scored the winning goal in the Champions League Final 2012/2013?",
+                    "answers": [
+                        {
+                            "text": "Bastian Schweinsteiger"
+                        },
+                        {
+                            "text": "Arjen Robben"
+                        },
+                        {
+                            "text": "Mario Mandzukic"
+                        },
+                        {
+                            "text": "Franck Ribéry"
+                        }
+                    ]
+                },
+                {
+                    "text": "How often did FC Bayern win the Bundesliga?",
+                    "answers": [
+                        {
+                            "text": "21"
+                        },
+                        {
+                            "text": "27"
+                        },
+                        {
+                            "text": "25"
+                        },
+                        {
+                            "text": "19"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who has scored the most goals for FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "Thomas Müller"
+                        },
+                        {
+                            "text": "Gerd Müller"
+                        },
+                        {
+                            "text": "Karl-Heinz Rumenigge"
+                        },
+                        {
+                            "text": "Robert Lewandowski"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who was the most recent transfer of FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "Leon Goretzka"
+                        },
+                        {
+                            "text": "Sandro Wagner"
+                        },
+                        {
+                            "text": "Corentin Tolisso"
+                        },
+                        {
+                            "text": "Niklas Süle"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who is the opponent of FC Bayern in the next round of the Champions League",
+                    "answers": [
+                        {
+                            "text": "FC Porto"
+                        },
+                        {
+                            "text": "AS Roma"
+                        },
+                        {
+                            "text": "Tottenham Hotspur"
+                        },
+                        {
+                            "text": "Besiktas Istanbul"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who is the oldest player in the squad of FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "Franck Ribéry"
+                        },
+                        {
+                            "text": "Arjen Robben"
+                        },
+                        {
+                            "text": "Rafinha"
+                        },
+                        {
+                            "text": "Manuel Neuer"
+                        }
+                    ]
+                },
+                {
+                    "text": "When did FC Bayern win the UEFA Champions League for the last time?",
+                    "answers": [
+                        {
+                            "text": "2011/2012"
+                        },
+                        {
+                            "text": "2014/2015"
+                        },
+                        {
+                            "text": "2013/14"
+                        },
+                        {
+                            "text": "2012/13"
+                        }
+                    ]
+                },
+                {
+                    "text": "How many goals did Robert Lewandowski score in the last Bundesliga season?",
+                    "answers": [
+                        {
+                            "text": "25"
+                        },
+                        {
+                            "text": "22"
+                        },
+                        {
+                            "text": "30"
+                        },
+                        {
+                            "text": "27"
+                        }
+                    ]
+                },
+                {
+                    "text": "When was the first match in the Allianz Arena?",
+                    "answers": [
+                        {
+                            "text": "2005"
+                        },
+                        {
+                            "text": "2006"
+                        },
+                        {
+                            "text": "2003"
+                        },
+                        {
+                            "text": "2002"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who was the most expensive transfer of FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "Corentin Tolisso"
+                        },
+                        {
+                            "text": "Robert Lewandowski"
+                        },
+                        {
+                            "text": "Leon Goretzka"
+                        },
+                        {
+                            "text": "Thomas Müller"
+                        }
+                    ]
+                },
+                {
+                    "text": "Against whom did FC Bayern lose the Champions League Final in 2011/2012?",
+                    "answers": [
+                        {
+                            "text": "Real Madrid"
+                        },
+                        {
+                            "text": "Manchester United"
+                        },
+                        {
+                            "text": "Juventus Turin"
+                        },
+                        {
+                            "text": "FC Chelsea"
+                        }
+                    ]
+                },
+                {
+                    "text": "When did FC Bayern win the German Championship for the first time?",
+                    "answers": [
+                        {
+                            "text": "1964"
+                        },
+                        {
+                            "text": "1949"
+                        },
+                        {
+                            "text": "1968"
+                        },
+                        {
+                            "text": "1932"
+                        }
+                    ]
+                },
+                {
+                    "text": "How much was the construction of the Allianz Arena?",
+                    "answers": [
+                        {
+                            "text": "120,000,000 €"
+                        },
+                        {
+                            "text": "340,000,000 €"
+                        },
+                        {
+                            "text": "228,000,000 €"
+                        },
+                        {
+                            "text": "430,000,000 €"
+                        }
+                    ]
+                },
+                {
+                    "text": "Which player completed the most matches in the Bundesliga for FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "Sepp Maier"
+                        },
+                        {
+                            "text": "Philipp Lahm"
+                        },
+                        {
+                            "text": "Franz Beckenbauer"
+                        },
+                        {
+                            "text": "Gerd Müller"
+                        }
+                    ]
+                },
+                {
+                    "text": "How much revenue did FC Bayern generate in 2016/2017?",
+                    "answers": [
+                        {
+                            "text": "550,000,000 €"
+                        },
+                        {
+                            "text": "640,500,000 €"
+                        },
+                        {
+                            "text": "712,500,000 €"
+                        },
+                        {
+                            "text": "453,000,000 €"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who is the youngest player to score a goal for FC Bayern?",
+                    "answers": [
+                        {
+                            "text": "David Alaba"
+                        },
+                        {
+                            "text": "Bastian Schweinsteiger"
+                        },
+                        {
+                            "text": "Roque Santa Cruz"
+                        },
+                        {
+                            "text": "Mehmet Scholl"
+                        }
+                    ]
+                },
+                {
+                    "text": "How many members does FC Bayern have? (November 2017)",
+                    "answers": [
+                        {
+                            "text": "402,677"
+                        },
+                        {
+                            "text": "189,687"
+                        },
+                        {
+                            "text": "228,345"
+                        },
+                        {
+                            "text": "340,474"
+                        }
+                    ]
+                },
+                {
+                    "text": "How old is Jupp Heynckes?",
+                    "answers": [
+                        {
+                            "text": "64"
+                        },
+                        {
+                            "text": "75"
+                        },
+                        {
+                            "text": "68"
+                        },
+                        {
+                            "text": "72"
+                        }
+                    ]
+                },
+                {
+                    "text": "How many UEFA Champions League titles did the FC Bayern win?",
+                    "answers": [
+                        {
+                            "text": "5"
+                        },
+                        {
+                            "text": "2"
+                        },
+                        {
+                            "text": "3"
+                        },
+                        {
+                            "text": "1"
+                        }
+                    ]
+                },
+                {
+                    "text": "How many fan clubs does FC Bayern have?(November 2017)",
+                    "answers": [
+                        {
+                            "text": "4,327"
+                        },
+                        {
+                            "text": "2,851"
+                        },
+                        {
+                            "text": "3,347"
+                        },
+                        {
+                            "text": "5,467"
+                        }
+                    ]
+                },
+                {
+                    "text": "Who ist the youngest player in the squad of FC Bayern",
+                    "answers": [
+                        {
+                            "text": "David Alaba"
+                        },
+                        {
+                            "text": "Joshua Kimmich"
+                        },
+                        {
+                            "text": "Christian Früchtl"
+                        },
+                        {
+                            "text": "Niklas Süle"
                         }
                     ]
                 }
