@@ -9,7 +9,6 @@ import {Question} from "../shared/models/Question";
     templateUrl: 'quiz.component.html'
 })
 
-
 export class QuizComponent implements OnInit {
 
     @Input() data: Quiz;

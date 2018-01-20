@@ -1,22 +1,37 @@
-<div class="start__container" fxLayout="column">
-    <div class="start__header" fxLayoutAlign="center center">
-        BG IMAGE:
-        3 Steps to Win Your FC Bayern Jersey Today!
-    </div>
-    <div class="start__content" fxLayout="column">
-        <div class="start__step" fxLayout="row" *ngFor="let step of steps; let i = index;">
-            <div class="start__step-number padding--sm">
-                {{i+1}}
-            </div>
-            <div class="start__step-text padding--sm">
-                {{step}}
-            </div>
-        </div>
-    </div>
-    <div class="start__action" fxLayoutAlign="center center">
-        <button mat-raised-button color="warn" (click)="checkParticipation()">
-            <mat-icon>videogame_asset</mat-icon>
-            <b>GO!</b>
-        </button>
-    </div>
+<div class="header-image-steps">
+
 </div>
+
+<mat-grid-list cols="4" rowHeight="150px;">
+
+    <mat-grid-tile
+        [colspan]=1>
+        <span class="start-number">1</span>
+    </mat-grid-tile>
+    <mat-grid-tile class="start-text"
+        [colspan]=3>
+        Das ist ein Text
+    </mat-grid-tile>
+
+
+    <mat-grid-tile
+        [colspan]=1>
+        <span class="start-number">2</span>
+    </mat-grid-tile>
+    <mat-grid-tile class="start-text"
+        [colspan]=3>
+        Das ist ein Text
+    </mat-grid-tile>
+
+
+    <mat-grid-tile
+        [colspan]=1>
+        <span class="start-number">3</span>
+    </mat-grid-tile>
+    <mat-grid-tile class="start-text"
+        [colspan]=3>
+        Das ist ein Text
+    </mat-grid-tile>
+</mat-grid-list>
+
+<a (click)="checkParticipation()" class="fancy-button pop-onhover bg-gradient1 start-fancy-button"><span>Starte das Quiz!</span></a>
