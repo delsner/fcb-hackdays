@@ -13,6 +13,7 @@ import {
     MatListModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatCheckboxModule
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -40,6 +41,7 @@ import {AuthGuard} from "./services/auth.guard";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatCheckboxModule,
         // custom modules
         MainLayoutModule
     ],
@@ -60,6 +62,7 @@ import {AuthGuard} from "./services/auth.guard";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatCheckboxModule,
         // translate module
         TranslateModule,
         // custom modules

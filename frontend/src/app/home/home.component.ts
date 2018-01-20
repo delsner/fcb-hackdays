@@ -7,6 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 
 export class HomeComponent implements OnInit {    
+    
+    public email: string = '';
+    public termsAccepted: boolean = true;
+
     constructor(translate: TranslateService) {
     }
 
