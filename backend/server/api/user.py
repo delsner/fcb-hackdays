@@ -10,6 +10,7 @@ from server.app import mongo
 @user_api.route('/signup', methods=['POST'])
 def signup():
     creds = request.get_json()  # {email}
+    creds['ip'] = request.remote_addr
     res = {}
 
     # if user does not exist create and store with init pw
