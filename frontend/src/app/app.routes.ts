@@ -14,6 +14,7 @@ import {GameComponent} from "./category/game/game.component";
 import {DhlComponent} from "./category/dhl/dhl.component";
 import {SocialComponent} from "./category/social/social.component";
 import {DrawComponent} from "./category/social/draw/draw.component";
+import {NavigationBubblesComponent} from "./navigation-bubbles/navigation-bubbles.component";
 
 
 export const ROUTES: Routes = [
@@ -35,5 +36,6 @@ export const ROUTES: Routes = [
     ]
     },
     {path: 'package-image-upload', component: PackageImageUploadComponent, data: {title: 'Image Upload'}},
+    {path: 'navigation-bubbles', component: NavigationBubblesComponent, data: {title: 'Navigation'}},
     {path: '**', redirectTo: '/'}
 ];
