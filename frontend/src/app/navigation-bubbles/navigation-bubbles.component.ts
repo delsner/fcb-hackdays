@@ -19,7 +19,10 @@ export class NavigationBubblesComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.eps = this.epService.getEps();
+        this.eps = 0;
+        setTimeout(() => {
+            this.eps = this.epService.getEps();
+        }, 1000);
     }
 
 
