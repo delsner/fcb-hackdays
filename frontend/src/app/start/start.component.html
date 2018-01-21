@@ -1,30 +1,39 @@
-<div class="start__top-image" fxLayoutAlign="center center">
-    <div class="start__top-header">
-        <h1>3 Steps To Win Your Jersey!</h1>
+<div class="page__top-image start__top-image" fxLayoutAlign="center center">
+    <div class="page__top-header">
+        <p>
+            3 Steps To Win Your Jersey!
+        </p>
     </div>
 </div>
 
-<div fxLayout="column">
-    <div *ngFor="let step of steps; let i = index;"
-         class="start__container"
-         fxLayout="row"
-         fxLayoutAlign="start center">
-        <div>
-            <div class="start__number" fxLayoutAlign="center center">
-                {{i + 1}}
+<!-- <div class="start__top-image" fxLayoutAlign="center center">
+    <div class="start__top-header">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div fxLayout="column" class="start__quiz-description-container" fxLayoutAlign="start center">
+                <p fxFlex>
+                    3 Steps To Win Your Jersey!
+                </p>
             </div>
         </div>
-        <div class="start__content padding-horizontal--md">
-            {{step}}
+    </div> -->
+
+
+    <div fxLayout="column">
+        <div *ngFor="let step of steps; let i = index;" class="start__container" fxLayout="row" fxLayoutAlign="start center">
+            <div>
+                <div class="start__number" fxLayoutAlign="center center">
+                    {{i + 1}}
+                </div>
+            </div>
+            <div class="start__content padding-horizontal--md">
+                {{step}}
+            </div>
         </div>
     </div>
-</div>
 
-<div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
-    <button (click)="checkParticipation()"
-            mat-raised-button
-            color="warn">
-        <mat-icon>videogame_asset</mat-icon>
-        <b>GO!</b>
-    </button>
-</div>
+    <div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
+        <button (click)="checkParticipation()" mat-raised-button color="warn">
+            <!-- <mat-icon>videogame_asset</mat-icon> -->
+            <b>GO!</b>
+        </button>
+    </div>

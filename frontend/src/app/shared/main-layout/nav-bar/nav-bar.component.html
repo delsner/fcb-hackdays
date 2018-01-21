@@ -1,8 +1,7 @@
 <mat-toolbar>
     <div fxFlex fxLayout="row">
         <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" routerLink="/">
-            <img [src]="logoUrl" height="30">
-            <img class="margin-left--xs" src="assets/images/dhl.png" height="30"/>            
+            <img [src]="logoUrl" height="40">
         </div>
         <div fxFlex *ngIf="!hasSideNav">
             <nav fxLayout="row" fxLayoutAlign="center center" fxHide fxShow.gt-sm>
