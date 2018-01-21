@@ -1,0 +1,10 @@
+<input type="file" style="display: none" accept="image/*" capture="camera" #fileInput/>
+<button (click)="fileInput.click(); addEps()" style="width: 100px; height: 60px;"
+        mat-raised-button
+        color="warn">
+    <b>Scan!</b>
+</button>
+
+
+<a routerLink="../account">Account</a>
+<a routerLink="../category">Category</a>
