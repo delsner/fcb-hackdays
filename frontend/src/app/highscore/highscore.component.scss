@@ -40,7 +40,7 @@
 }
 
 .highscore__table {
-    width: 500px;
+    width: 400px;
     max-width: 100%;
 
     table {
@@ -48,6 +48,13 @@
         border-spacing: 0;
         border: none;
         width: 100%;
+
+        thead {
+            background-color: $light-gray-bg;
+            th{
+                height: 50px;
+            }
+        }
 
         tr {
             border-bottom: 1px solid rgba(0, 0, 0, .12);
@@ -61,5 +68,9 @@
                 padding: 0 $unit-sm;
             }
         }
+    }
+
+    .own-user {
+        background-color: $accent;
     }
 }

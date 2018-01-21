@@ -3,8 +3,8 @@
         <p>We will inform you as soon as possible!</p>
     </div>
 </div>
-<div fxLayout="column" class="padding--md" fxLayoutAlign="center center">
-    
+<div fxLayout="column" class="padding--md" fxLayoutAlign="center center" *ngIf="single && scores">
+
     <ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="single" [designatedTotal]="totalValue">
     </ngx-charts-pie-grid>
 
@@ -12,28 +12,30 @@
     <div class="card highscore__table table__box-shadow">
         <table>
             <thead class="padding-vertical--sm">
-                <th>
-                    Place
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Score
-                </th>
+            <th>
+                Place
+            </th>
+            <th>
+                Score
+            </th>
             </thead>
             <tbody>
-                <tr *ngFor="let score of scores; let i = index;" class="table__cell--highlighted">
-                    <td>
-                        <div fxLayoutAlign="center center">
-                            <button mat-mini-fab color="primary">
-                                {{i + 1 }}
-                            </button>
-                        </div>
-                    </td>
-                    <td>{{score.user_id.$oid}}</td>
-                    <td>{{score.points}}</td>
-                </tr>
+            <tr *ngFor="let score of scores; let i = index;"
+                class="table__cell--highlighted"
+                [class.own-user]="score.email">
+                <td>
+                    <div fxLayoutAlign="center center">
+                        <button mat-mini-fab color="primary">
+                            {{score.rank}}
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div fxLayoutAlign="center center">
+                        {{score.points}}
+                    </div>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

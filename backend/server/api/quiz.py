@@ -60,7 +60,7 @@ def verify_quiz(quiz_id):
 def get_top_scores(quiz_id):
     email = get_jwt_identity()
     user_id = mongo.db.users.find_one({'email': email})['_id']
-    scores = mongo.db.scores.find({"quiz_id": ObjectId(quiz_id), "points": {'$ne': None}})
+    scores = mongo.db.scores.find({"quiz_id": ObjectId(quiz_id), "points": {'$ne': None}}).sort([('points', -1)])
     scores = list(scores)
     for s in scores:
         if s['user_id'] == user_id:
