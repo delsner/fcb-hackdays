@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 @Injectable()
 export class EpService {
 
-    private counter = 80;
+    private counter = 30;
     constructor() {
 
     }

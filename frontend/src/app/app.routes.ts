@@ -6,7 +6,7 @@ import {AuthGuard} from "./shared/services/auth.guard";
 import {ChallengeComponent} from "./challenge/challenge.component";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {QuizGuard} from "./shared/services/quiz.guard";
-import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
+import {PackageImageUploadComponent} from "./category/dhl/package-image-upload/package-image-upload.component";
 import {CommunityComponent} from "./community/community.component";
 import {AccountComponent} from "./account/account.component";
 import {CategoryComponent} from "./category/category.component";
@@ -28,12 +28,12 @@ export const ROUTES: Routes = [
         {path: 'category', component: CategoryComponent, data: {title: 'Category'}},
         {path: 'game', component: GameComponent, data: {title: 'Game'}}, // quiz -> redirect to home
         {path: 'dhl', component: DhlComponent, data: {title: 'DHL'}},
+        {path: 'dhl/package-image-upload', component: PackageImageUploadComponent, data: {title: 'Image Upload'}},
         {path: 'social', component: SocialComponent, data: {title: 'Social'}},
         {path: 'social/draw', component: DrawComponent, data: {title: 'Draw'}},
         {path: '**', redirectTo: '/community/account'}
 
     ]
     },
-    {path: 'package-image-upload', component: PackageImageUploadComponent, data: {title: 'Image Upload'}},
     {path: '**', redirectTo: '/'}
 ];

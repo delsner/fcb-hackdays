@@ -17,7 +17,7 @@ import {ChallengeComponent} from "./challenge/challenge.component";
 import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {TermsComponent} from "./terms/terms.component";
-import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
+import {PackageImageUploadComponent} from "./category/dhl/package-image-upload/package-image-upload.component";
 import {AccountComponent} from './account/account.component';
 import {CategoryComponent} from './category/category.component';
 import {GameComponent} from './category/game/game.component';
@@ -26,7 +26,7 @@ import {SocialComponent} from './category/social/social.component';
 import {DrawComponent} from './category/social/draw/draw.component';
 import { CommunityComponent } from './community/community.component';
 import {EpService} from "./shared/services/ep.service";
-import {NavigationBubblesComponent} from "./navigation-bubbles/navigation-bubbles.component";
+import {ImageUploadSuccessDialog} from "./category/dhl/package-image-upload/success/image-upload-success.dialog";
 
 
 
@@ -52,7 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         DhlComponent,
         SocialComponent,
         DrawComponent,
-        CommunityComponent
+        CommunityComponent,
+        ImageUploadSuccessDialog
     ],
     imports: [
         BrowserModule,
@@ -70,6 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ],
     entryComponents: [
         ChallengeSubmitDialog,
+        ImageUploadSuccessDialog
     ],
     providers: [QuizService, EpService],
     bootstrap: [
