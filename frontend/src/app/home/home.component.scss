@@ -1,7 +1,7 @@
 @import '../shared/styles/main';
 
 .home__top-image {
-    height: 45vh;
+    height: 50vh;
     width: 100%;
     position: relative;
     background: url("/assets/images/arena.png") no-repeat;
@@ -48,7 +48,7 @@
 
 .text-yellow {
     color: $accent;
-    font-weight: $font-bold    
+    font-weight: $font-bold
 }
 
 .home__jersey-img {
