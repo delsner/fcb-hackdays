@@ -74,7 +74,7 @@
 
 .start-content{
     @include breakpoint-min($screen-md-min) {
-        width: 600px;
+        width: 100%;
         margin: auto;
     }
 }
