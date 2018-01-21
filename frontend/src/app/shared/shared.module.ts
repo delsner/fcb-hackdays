@@ -15,7 +15,7 @@ import {
     MatSelectModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatGridListModule,
+    MatGridListModule, MatProgressBarModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -47,6 +47,7 @@ import {QuizGuard} from "./services/quiz.guard";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatProgressBarModule,
         MatCheckboxModule,
         // custom modules
         MainLayoutModule
@@ -62,6 +63,7 @@ import {QuizGuard} from "./services/quiz.guard";
         MatTooltipModule,
         MatButtonModule,
         MatCardModule,
+        MatProgressBarModule,
         MatDialogModule,
         MatInputModule,
         MatStepperModule,

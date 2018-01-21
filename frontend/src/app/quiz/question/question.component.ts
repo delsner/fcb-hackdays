@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild} from '@angular/core';
 import {Question} from "../../shared/models/Question";
 
 @Component({
@@ -12,7 +12,9 @@ export class QuestionComponents implements OnInit {
 
     @Input() question: Question;
 
-    constructor() {
+
+    constructor(
+    ) {
     }
 
     ngOnInit() {
