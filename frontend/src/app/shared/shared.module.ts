@@ -1,3 +1,4 @@
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
@@ -48,7 +49,8 @@ import {QuizService} from "./services/quiz.service";
         MatSelectModule,
         MatCheckboxModule,
         // custom modules
-        MainLayoutModule
+        MainLayoutModule,
+        NgxChartsModule
     ],
     exports: [
         CommonModule,
@@ -73,7 +75,8 @@ import {QuizService} from "./services/quiz.service";
         // translate module
         TranslateModule,
         // custom modules
-        MainLayoutModule
+        MainLayoutModule,
+        NgxChartsModule
     ],
     declarations: [],
     entryComponents: [],
