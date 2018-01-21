@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class HomeComponent implements OnInit {
 
     public email: string = '';
-    public termsAccepted: boolean = true;
+    public termsAccepted: boolean = false;
 
     constructor(private authService: AuthService,
                 private router: Router) {

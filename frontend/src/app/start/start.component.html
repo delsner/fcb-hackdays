@@ -1,11 +1,12 @@
-<div class="start__top-image" fxLayoutAlign="center center">
-    <div class="start__top-header">
-        <h1>3 Steps To Win Your Jersey!</h1>
+<div class="page__top-image start__top-image" fxLayoutAlign="center center">
+    <div class="page__top-header">
+        <p>
+            3 Steps To Win Your Jersey!
+        </p>
     </div>
 </div>
 
-
-<div class="start-content">
+<div class="start-content" fxLayoutAlign="center center">
     <div fxLayout="column" class="full-width full-height padding--md">
         <div fxLayout="row" fxFlex class="padding--md">
             <div fxFlex="2 1 auto" fxLayoutAlign="left left">
@@ -37,8 +38,12 @@
         </div>
     </div>
 
+    <button mat-raised-button class="margin--xs" color="warn" (click)="checkParticipation()">
+        <b>GO!</b>            
+    </button>
 
-    <div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
+
+    <!-- <div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
         <button (click)="checkParticipation()"
                 class="go-btn"
                 mat-raised-button
@@ -46,6 +51,8 @@
             <mat-icon>videogame_asset</mat-icon>
             <b>GO!</b>
         </button>
-    </div>
+    </div> -->
+
+
 
 </div>

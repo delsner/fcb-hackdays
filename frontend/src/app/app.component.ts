@@ -24,16 +24,18 @@ export class AppComponent {
         this.authService.currentUser.subscribe((user) => {
             if (user) {
                 this.menuItems = [
-                    {
-                        name: 'Terms of Participation',
-                        route: 'terms'
-                    }
+                    // {
+                    //     name: 'Terms of Participation',
+                    //     route: 'terms'
+                    // }
                 ];
             } else {
-                this.menuItems = [{
-                    name: 'Terms',
-                    route: 'terms'
-                }];
+                this.menuItems = [
+                //     {
+                //     name: 'Terms',
+                //     route: 'terms'
+                // }
+            ];
             }
         });
         // this language will be used as a fallback when a translation isn't found in the current language
