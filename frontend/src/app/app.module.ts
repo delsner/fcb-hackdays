@@ -1,15 +1,23 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
 import {AppComponent} from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {PreloadAllModules, RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import {HomeComponent} from "./home/home.component";
+import {StartComponent} from "./start/start.component";
+import {QuizComponent} from "./quiz/quiz.component";
+import {QuizService} from "./shared/services/quiz.service";
+import {HttpClientModule, HttpClient} from "@angular/common/http";
+import {QuestionComponents} from "./quiz/question/question.component";
+import {ChallengeComponent} from "./challenge/challenge.component";
+import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
+import {HighscoreComponent} from "./highscore/highscore.component";
+import {TermsComponent} from "./terms/terms.component";
+
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -18,11 +26,19 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        QuizComponent,
+        StartComponent,
+        ChallengeComponent,
+        QuestionComponents,
+        ChallengeSubmitDialog,
+        HighscoreComponent,
+        TermsComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         RouterModule.forRoot(ROUTES, {useHash: false, preloadingStrategy: PreloadAllModules}),
         TranslateModule.forRoot({
             loader: {
@@ -30,10 +46,13 @@ export function HttpLoaderFactory(http: HttpClient) {
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        }),   
-        SharedModule
+        }),
+        SharedModule,
     ],
-    providers: [],
+    entryComponents: [
+        ChallengeSubmitDialog,
+    ],
+    providers: [QuizService],
     bootstrap: [
         AppComponent]
 })

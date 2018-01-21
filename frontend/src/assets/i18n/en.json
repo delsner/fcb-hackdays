@@ -1,8 +1,17 @@
-{   
+{
     "navigation": {
-        "home": "Home"
+        "home": "Home",
+        "Start": "Start",
+        "Quiz": "Quiz",
+        "Highscore": "Highscore"
      },
     "home": {
-        "start": "Home"
+        "mainSlogan": "Be part of the global FC Bayern family!",
+        "quizDescriptionHead": "Show your knowledge about FC Bayern.",
+        "quizDescriptionSubhead": "Win the quiz und receive your jersey from DHL.",
+        "button": {
+            "startChallenge": "Start Quiz",
+            "acceptTerms": "I accept the Terms & Conditions"
+        }
     }
 }

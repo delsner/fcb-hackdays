@@ -1,0 +1,39 @@
+<div class="highscore__top-image" fxLayoutAlign="center center">
+    <div class="highscore__top-header">
+        <h1>We will inform you as soon as possible!</h1>
+    </div>
+</div>
+
+<div fxLayout="column"
+     class="padding--md"
+     fxLayoutAlign="center center">
+    <div class="card highscore__table table__box-shadow">
+        <table>
+            <thead>
+            <th>
+                Place
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Score
+            </th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let score of scores; let i = index;" class="table__cell--highlighted">
+                <td>
+                    <div fxLayoutAlign="center center">
+                        <button mat-mini-fab color="primary">
+                            {{i + 1 }}
+                        </button>
+                    </div>
+                </td>
+                <td>{{score.user_id.$oid}}</td>
+                <td>{{score.points}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

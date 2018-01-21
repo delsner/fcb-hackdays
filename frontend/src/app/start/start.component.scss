@@ -1,0 +1,66 @@
+@import "../shared/styles/main";
+
+.start__top-image {
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    &::after {
+        content: "";
+        background-color: $primary;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+    }
+}
+
+.start__top-header {
+    color: $light-font-color;
+    z-index: 3;
+    text-align: center;
+    font-weight: $font-bold;
+    padding: $unit-md;
+
+    h1 {
+        font-size: $font-size-xlarge;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: $font-regular;
+    }
+}
+
+.start__container {
+    padding: $unit-md;
+}
+
+.start__number {
+    height: 50px;
+    width: 50px;
+    font-size: 32px;
+    line-height: 32px;
+    background: $primary;
+    color: $light-font-color;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.single-step {
+    margin-top: 20px;
+}
+
+.header-image-steps {
+    height: 20%;
+    margin-left: -30px;
+    width: 110%;
+    background: url('/assets/images/bayern-header-logo.jpg') no-repeat center center fixed;
+}

@@ -1,8 +1,17 @@
 {
     "navigation": {
-        "Home": "Home"
+        "Home": "Home",
+        "Start": "Start",
+        "Quiz": "Quiz",
+        "Highscore": "Highscore"
     },
     "home": {
-        "start": "Home"
+        "mainSlogan": "Werde Mitglied der globalen FC Bayern Familie!",
+        "quizDescriptionHead": "Zeig dein Wissen über den FC Bayern.",
+        "quizDescriptionSubhead": "Gewinne das Quiz und erhalte dein Trikot von DHL.",
+        "button": {
+            "startChallenge": "Quiz starten",
+            "acceptTerms": "Ich akzeptiere die Nutzungsbedingungen"
+        }
     }
 }

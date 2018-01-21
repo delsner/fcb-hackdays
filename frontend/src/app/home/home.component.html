@@ -1,1 +1,42 @@
-<div>{{ 'home.start' | translate }}</div>
+<div class="home__top-image" fxLayoutAlign="center center">
+    <div class="home__top-header">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            
+            <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="start center">
+                    <p fxFlex>
+                         Show your knowledge about FC Bayern.
+                    </p>
+                    <p>
+                        Win the quiz and get 
+                        <span class="text-red">your jersey</span> delivered
+                        <span class="text-yellow">by DHL</span>
+                    </p>
+                </div>
+            <img class="home__jersey-img" src="assets/images/fcb_trikot.png"/>
+        </div>
+    </div>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="center center" class="padding--md">
+
+    <div class="home__quiz-description-container"> 
+        <p>DHL and FC Bayern – A truly global family</p> 
+    </div>
+
+
+    <div fxLayout="column" class="padding--sm">
+        <mat-input-container dividerColor="warn">
+            <input matInput name="email" [(ngModel)]="email" placeholder="Your email to participate...">
+        </mat-input-container>
+        <mat-checkbox name="terms" [(ngModel)]="termsAccepted">
+            <p class="padding-left--xs">{{ 'home.button.acceptTerms' | translate}}</p>
+        </mat-checkbox>
+    </div>
+
+    <button mat-raised-button class="margin--sm" color="warn" (click)="signup()">{{'home.button.startChallenge' |
+        translate}}
+    </button>
+
+</div>
+
+

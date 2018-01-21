@@ -1,0 +1,13 @@
+@import "../shared/styles/main";
+
+@media (min-width: 1025px) {
+    .question-text {
+        text-align: center;
+    }
+    .mat-grid-list {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+

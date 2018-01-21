@@ -1,4 +1,4 @@
-import { TranslateModule } from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -13,6 +13,8 @@ import {
     MatListModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatCheckboxModule,
+    MatGridListModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -20,6 +22,8 @@ import {HttpService} from './services/http.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
+import {AuthGuard} from "./services/auth.guard";
+import {QuizService} from "./services/quiz.service";
 
 @NgModule({
     imports: [
@@ -31,6 +35,7 @@ import {SocketService} from "./services/socket.service";
         // Material Modules
         FlexLayoutModule,
         MatTooltipModule,
+        MatGridListModule,
         MatButtonModule,
         MatCardModule,
         MatDialogModule,
@@ -39,6 +44,7 @@ import {SocketService} from "./services/socket.service";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatCheckboxModule,
         // custom modules
         MainLayoutModule
     ],
@@ -56,9 +62,11 @@ import {SocketService} from "./services/socket.service";
         MatDialogModule,
         MatInputModule,
         MatIconModule,
+        MatGridListModule,
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatCheckboxModule,
         // translate module
         TranslateModule,
         // custom modules
@@ -69,7 +77,9 @@ import {SocketService} from "./services/socket.service";
     providers: [
         AuthService,
         HttpService,
-        SocketService
+        SocketService,
+        AuthGuard,
+        QuizService
     ]
 })
 export class SharedModule {
