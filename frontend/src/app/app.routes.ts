@@ -6,6 +6,7 @@ import {AuthGuard} from "./shared/services/auth.guard";
 import {ChallengeComponent} from "./challenge/challenge.component";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {QuizGuard} from "./shared/services/quiz.guard";
+import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
 
 
 export const ROUTES: Routes = [
@@ -14,5 +15,6 @@ export const ROUTES: Routes = [
     {path: 'quiz', component: ChallengeComponent, canActivate: [AuthGuard, QuizGuard], data: {title: 'Quiz'}},
     {path: 'highscore', component: HighscoreComponent, canActivate: [AuthGuard], data: {title: 'Highscore'}},
     {path: 'terms', component: TermsComponent, data: {title: 'Terms'}},
+    {path: 'package-image-upload', component: PackageImageUploadComponent, data: {title: 'Image Upload'}},
     {path: '**', redirectTo: '/'}
 ];
