@@ -18,6 +18,8 @@ import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {TermsComponent} from "./terms/terms.component";
 import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
+import {EpService} from "./shared/services/ep.service";
+import {NavigationBubblesComponent} from "./navigation-bubbles/navigation-bubbles.component";
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -33,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ChallengeComponent,
         QuestionComponents,
         ChallengeSubmitDialog,
+        NavigationBubblesComponent,
         HighscoreComponent,
         TermsComponent,
         PackageImageUploadComponent
@@ -54,7 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     entryComponents: [
         ChallengeSubmitDialog,
     ],
-    providers: [QuizService],
+    providers: [QuizService, EpService],
     bootstrap: [
         AppComponent]
 })
