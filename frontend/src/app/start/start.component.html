@@ -4,27 +4,48 @@
     </div>
 </div>
 
-<div fxLayout="column">
-    <div *ngFor="let step of steps; let i = index;"
-         class="start__container"
-         fxLayout="row"
-         fxLayoutAlign="start center">
-        <div>
-            <div class="start__number" fxLayoutAlign="center center">
-                {{i + 1}}
+
+<div class="start-content">
+    <div fxLayout="column" class="full-width full-height padding--md">
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxFlex="2 1 auto" fxLayoutAlign="left left">
+                <span class="start__number">1</span>
+            </div>
+            <div fxFlex="8 1 auto" fxLayoutAlign="left left">
+                Das ist in Test
             </div>
         </div>
-        <div class="start__content padding-horizontal--md">
-            {{step}}
+
+
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxFlex="2 1 auto" fxLayoutAlign="left left">
+                <span class="start__number">2</span>
+            </div>
+            <div fxFlex="8 1 auto" fxLayoutAlign="left left">
+                Das ist in Test
+            </div>
+        </div>
+
+
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxFlex="2 1 auto" fxLayoutAlign="left left">
+                <span class="start__number">3</span>
+            </div>
+            <div fxFlex="8 1 auto" fxLayoutAlign="left left">
+                Das ist in Test
+            </div>
         </div>
     </div>
-</div>
 
-<div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
-    <button (click)="checkParticipation()"
-            mat-raised-button
-            color="warn">
-        <mat-icon>videogame_asset</mat-icon>
-        <b>GO!</b>
-    </button>
+
+    <div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
+        <button (click)="checkParticipation()"
+                class="go-btn"
+                mat-raised-button
+                color="warn">
+            <mat-icon>videogame_asset</mat-icon>
+            <b>GO!</b>
+        </button>
+    </div>
+
 </div>

@@ -14,6 +14,7 @@ import {
     MatSnackBarModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatStepperModule,
     MatGridListModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -38,6 +39,7 @@ import {QuizGuard} from "./services/quiz.guard";
         MatTooltipModule,
         MatGridListModule,
         MatButtonModule,
+        MatStepperModule,
         MatCardModule,
         MatDialogModule,
         MatInputModule,
@@ -62,6 +64,7 @@ import {QuizGuard} from "./services/quiz.guard";
         MatCardModule,
         MatDialogModule,
         MatInputModule,
+        MatStepperModule,
         MatIconModule,
         MatGridListModule,
         MatListModule,
