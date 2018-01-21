@@ -2,7 +2,7 @@ import {Component, ElementRef} from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
 import {NavigationEnd, Router} from "@angular/router";
 import {TranslateService} from '@ngx-translate/core';
-import {EpService} from "../shared/services/ep.service";
+import {EpService} from "../../../shared/services/ep.service";
 import {MatDialog} from "@angular/material";
 import {ImageUploadSuccessDialog} from "./success/image-upload-success.dialog";
 

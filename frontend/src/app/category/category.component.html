@@ -1,7 +1,7 @@
 <h1 class="text-center">Your Challenges</h1>
 
 
-<mat-card class="nav-card" id="nav-1">
+<mat-card class="nav-card" id="nav-1" routerLink="../social">
     <mat-card-content>
         <div class="layer">
         </div>
@@ -10,7 +10,7 @@
     </mat-card-content>
 </mat-card>
 
-<mat-card class="nav-card" id="nav-2">
+<mat-card class="nav-card" id="nav-2" routerLink="../game">
     <mat-card-content>
         <div class="layer">
         </div>
@@ -19,16 +19,14 @@
     </mat-card-content>
 </mat-card>
 
-<a routerLink="/package-image-upload">
-    <mat-card class="nav-card" id="nav-3">
-        <mat-card-content>
-            <div class="layer">
-            </div>
+<mat-card class="nav-card" id="nav-3" routerLink="../dhl">
+    <mat-card-content>
+        <div class="layer">
+        </div>
 
-            <h1 class="nav-title">Brand Interaction</h1>
-        </mat-card-content>
-    </mat-card>
-</a>
+        <h1 class="nav-title">Brand Interaction</h1>
+    </mat-card-content>
+</mat-card>
 
 <div id="progress-bar-content">
     <mat-progress-bar clas="progress-bar" color="accent" id mode="determinate" [value]="eps"></mat-progress-bar>
@@ -37,3 +35,7 @@
     </div>
 
 </div>
+
+
+<a routerLink="../account">Account</a>
+<a routerLink="./">Category</a>

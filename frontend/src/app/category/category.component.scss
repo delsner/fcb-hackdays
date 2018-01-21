@@ -20,8 +20,6 @@
     position: relative;
 }
 
-
-
 .nav-card {
     margin: 22px auto 0;
     padding: 32px 16px;
@@ -29,7 +27,7 @@
     background-size: cover;
     color: #fff;
     border-radius: 15px;
-    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4) !important;
+    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4) !important;
     .layer {
         border-radius: 15px;
         background-color: rgba(42, 42, 38, 0.7);
@@ -41,15 +39,16 @@
 
     }
 
-
 }
 
 #nav-1 {
     background-image: url('/assets/images/social.jpg');
 }
+
 #nav-2 {
     background-image: url('/assets/images/social.jpg');
 }
+
 #nav-3 {
     background-image: url('/assets/images/social.jpg');
 }
