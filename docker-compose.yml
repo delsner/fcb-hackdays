@@ -2,7 +2,7 @@ version: "3"
 services:
   nginx:
       image: nginx
-      container_name: 'nginx'
+      container_name: 'nginx_prod'
       depends_on:
         - frontend
         - backend
@@ -16,13 +16,13 @@ services:
   frontend:
     build:
       context: ./frontend
-    container_name: "frontend"
+    container_name: "frontend_prod"
     volumes:
       - shared:/app/dist
   backend:
     build:
       context: ./backend
-    container_name: "backend"
+    container_name: "backend_prod"
     env_file:
       - .env
     volumes:
@@ -35,7 +35,7 @@ services:
       - db
   db:
     image: mongo:3.4.0
-    container_name: "mongodb"
+    container_name: "mongodb_prod"
     env_file:
       - .env
     volumes:
