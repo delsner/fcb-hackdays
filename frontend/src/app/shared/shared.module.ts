@@ -16,7 +16,7 @@ import {
     MatSelectModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatGridListModule,
+    MatGridListModule, MatProgressBarModule,
 } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AuthService} from './services/auth.service';
@@ -26,6 +26,7 @@ import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
 import {QuizService} from "./services/quiz.service";
+import {QuizGuard} from "./services/quiz.guard";
 
 @NgModule({
     imports: [
@@ -47,6 +48,7 @@ import {QuizService} from "./services/quiz.service";
         MatListModule,
         MatSnackBarModule,
         MatSelectModule,
+        MatProgressBarModule,
         MatCheckboxModule,
         // custom modules
         MainLayoutModule,
@@ -63,6 +65,7 @@ import {QuizService} from "./services/quiz.service";
         MatTooltipModule,
         MatButtonModule,
         MatCardModule,
+        MatProgressBarModule,
         MatDialogModule,
         MatInputModule,
         MatStepperModule,
@@ -85,7 +88,8 @@ import {QuizService} from "./services/quiz.service";
         HttpService,
         SocketService,
         AuthGuard,
-        QuizService
+        QuizService,
+        QuizGuard
     ]
 })
 export class SharedModule {

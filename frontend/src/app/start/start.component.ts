@@ -24,14 +24,8 @@ export class StartComponent implements OnInit {
 
     public checkParticipation() {
         // check quiz service participation and redirect to /quiz or /highscore
-        this.quizService.getLatestQuiz().subscribe((quiz) => {
-            this.quizService.checkParticipationQuiz(quiz._id.$oid).subscribe((res) => {
-                if (res.canParticipate) {
-                    this.router.navigateByUrl('/quiz');
-                } else {
-                    this.router.navigateByUrl('/highscore');
-                }
-            })
+        this.quizService.quiz.subscribe((quiz) => {
+            this.router.navigateByUrl('/quiz');
         });
 
     }
