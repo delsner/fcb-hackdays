@@ -1,17 +1,15 @@
 <div class="home__top-image" fxLayoutAlign="center center">
     <div class="home__top-header">
         <div fxLayout="row" fxLayoutAlign="start center">
-            
+
             <div fxLayout="column" class="home__quiz-description-container" fxLayoutAlign="start center">
-                    <p fxFlex>
-                         <b>Show your knowledge about FC Bayern!</b>
-                    </p>
-                    <p>
-                        Win the quiz and get 
-                        <span class="text-red">your JERSEY</span> delivered
-                        <span class="text-yellow">by DHL</span>
-                    </p>
-                </div>
+                <p>
+                    <b>Show your knowledge about FC Bayern!</b><br/>
+                    Win the quiz and get
+                    <span class="text-red">your JERSEY</span> delivered
+                    <span class="text-yellow">by DHL</span>
+                </p>
+            </div>
             <img class="home__jersey-img" src="assets/images/fcb_trikot.png"/>
         </div>
     </div>
@@ -19,7 +17,7 @@
 
 <div fxLayout="column" fxLayoutAlign="center center" class="padding--md">
 
-    <!-- <div class="home__quiz-description-container"> 
+    <!-- <div class="home__quiz-description-container">
         <p><b>DHL and FC Bayern – A truly global family</b> </p>
     </div> -->
 
@@ -32,7 +30,8 @@
             <p class="padding-left--xs">I accept the <a routerLink="terms">terms and conditions</a></p>
         </mat-checkbox>
     </div>
-    <button [disabled]="!email || !termsAccepted" mat-raised-button class="margin--xs" color="warn" (click)="signup()">{{'home.button.startChallenge' |
+    <button [disabled]="!email || !termsAccepted" mat-raised-button class="margin--xs" color="warn" (click)="signup()">
+        {{'home.button.startChallenge' |
         translate}}
     </button>
 
