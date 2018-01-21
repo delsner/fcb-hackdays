@@ -10,7 +10,7 @@ from server.app import mongo
 @admin_api.route("/init_data", methods=['GET'])
 def init_data():
     # init data
-    data = json.load(open('data.json'))
+    data = json.load(open('data.json', encoding='utf-8'))
     for d in data.keys():
         print('Inserting into: ', d)
         mongo.db[d].insert_many(data[d])

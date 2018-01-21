@@ -10,5 +10,6 @@ RUN yarn install --pure-lockfile
 COPY . /app
 
 # create dist
-RUN ng build --prod --output-path docs --base-href /fcb-hackdays/ --deploy-url /fcb-hackdays/
+# RUN ng build --prod --output-path docs --base-href /fcb-hackdays/ --deploy-url /fcb-hackdays/
+RUN ng build
 
