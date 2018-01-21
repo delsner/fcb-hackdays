@@ -26,6 +26,13 @@ export class QuizComponent implements OnInit {
                 private router: Router) {
         this.quizService.quiz.subscribe((quiz) => {
             this.quiz = quiz;
+            console.log('QUIIIZZZ');
+            if (quiz) {
+                console.log('QUIIIZZZ1');
+                this.quizService.startQuiz(quiz._id.$oid).subscribe((res) => {
+                    console.log('STARTED QUIZ');
+                });
+            }
         });
     }
 
