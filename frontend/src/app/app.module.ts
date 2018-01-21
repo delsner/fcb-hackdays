@@ -20,6 +20,7 @@ import {TermsComponent} from "./terms/terms.component";
 import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
 import {EpService} from "./shared/services/ep.service";
 import {NavigationBubblesComponent} from "./navigation-bubbles/navigation-bubbles.component";
+import {ImageUploadSuccessDialog} from "./package-image-upload/success/image-upload-success.dialog";
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         NavigationBubblesComponent,
         HighscoreComponent,
         TermsComponent,
-        PackageImageUploadComponent
+        PackageImageUploadComponent,
+        ImageUploadSuccessDialog
     ],
     imports: [
         BrowserModule,
@@ -56,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ],
     entryComponents: [
         ChallengeSubmitDialog,
+        ImageUploadSuccessDialog
     ],
     providers: [QuizService, EpService],
     bootstrap: [
