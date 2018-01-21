@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 
 export class QuizComponent implements OnInit {
 
-    @Input() data: any;
+    public quiz: any;
 
     @Output() submitted: EventEmitter<boolean> = new EventEmitter();
 
@@ -24,11 +24,13 @@ export class QuizComponent implements OnInit {
 
     constructor(private quizService: QuizService,
                 private router: Router) {
-        //TODO: reroute if not ok here
+        this.quizService.quiz.subscribe((quiz) => {
+            this.quiz = quiz;
+        });
     }
 
     ngOnInit() {
-        this.actQuestion = this.data.questions[0];
+        this.actQuestion = this.quiz.questions[0];
     }
 
     public submitAnswer(answerIndex: number) {
@@ -37,16 +39,16 @@ export class QuizComponent implements OnInit {
 
         this.actQuestionIndex++;
 
-        if (this.actQuestionIndex >= this.data.questions.length) {
+        if (this.actQuestionIndex >= this.quiz.questions.length) {
             this.submitted.emit(true);
             this.submitQuiz();
             return;
         }
-        this.actQuestion = this.data.questions[this.actQuestionIndex];
+        this.actQuestion = this.quiz.questions[this.actQuestionIndex];
     }
 
     public submitQuiz() {
-        this.quizService.verifyQuiz(this.data._id.$oid, this.userAnswers).subscribe((res) => {
+        this.quizService.verifyQuiz(this.quiz._id.$oid, this.userAnswers).subscribe((res) => {
             this.router.navigateByUrl('/highscore');
         });
     }

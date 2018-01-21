@@ -24,6 +24,7 @@ import {MainLayoutModule} from "./main-layout/main-layout.module";
 import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
 import {QuizService} from "./services/quiz.service";
+import {QuizGuard} from "./services/quiz.guard";
 
 @NgModule({
     imports: [
@@ -79,7 +80,8 @@ import {QuizService} from "./services/quiz.service";
         HttpService,
         SocketService,
         AuthGuard,
-        QuizService
+        QuizService,
+        QuizGuard
     ]
 })
 export class SharedModule {

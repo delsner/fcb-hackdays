@@ -54,11 +54,8 @@
 }
 
 .answer-card {
-    height: 150px;
+    height: 80px;
     cursor: pointer;
     background-color: $primary;
     color: $light-font-color;
-    &:hover {
-        opacity: 0.5;
-    }
 }
