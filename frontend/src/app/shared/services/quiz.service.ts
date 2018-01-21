@@ -12,21 +12,20 @@ export class QuizService {
 
     private $quiz: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
-    constructor(private http: HttpService,
-                private httpClient: HttpClient) {
+    constructor(private http: HttpService) {
     }
 
     public get quiz(): BehaviorSubject<any> {
+        if (!this.$quiz.getValue()) {
+            this.getLatestQuiz().subscribe((quiz) => {
+                this.$quiz.next(quiz);
+            });
+        }
         return this.$quiz;
     }
 
     public getLatestQuiz(): Observable<any> {
-        return this.http.generateRequest('GET', this.domain, 'latest').pipe(
-                map((response) => {
-                    this.quiz.next(response);
-                    return response;
-                })
-            );
+        return this.http.generateRequest('GET', this.domain, 'latest');
     }
 
     public checkParticipationQuiz(quizId: string): Observable<any> {
@@ -37,11 +36,19 @@ export class QuizService {
         return this.http.generateRequest('POST', this.domain, `${quizId}/verify`, null, answers);
     }
 
+    public startQuiz(quizId: string): Observable<any> {
+        return this.http.generateRequest('GET', this.domain, `${quizId}/start`);
+    }
+
     public getTopScoresByQuiz(quizId: string): Observable<any> {
         return this.http.generateRequest('GET', this.domain, `${quizId}/top_scores`);
     }
 
-    public getQuiz() {
-        return this.httpClient.get("assets/data/quiz1.json");
+    public getCurrentQuiz() {
+        return this.$quiz.getValue();
+    }
+
+    public cleanup() {
+        this.$quiz.next(null);
     }
 }

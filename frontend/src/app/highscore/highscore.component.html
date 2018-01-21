@@ -1,12 +1,14 @@
-<div class="highscore__top-image" fxLayoutAlign="center center">
-    <div class="highscore__top-header">
-        <h1>We will inform you as soon as possible!</h1>
+<div class="page_top-image highscore__top-image" fxLayoutAlign="center center">
+    <div class="page__top-header">
+        <p>We will inform you as soon as possible!</p>
     </div>
 </div>
+<div fxLayout="column" class="padding--md" fxLayoutAlign="center center" *ngIf="single && scores">
 
-<div fxLayout="column"
-     class="padding--md"
-     fxLayoutAlign="center center">
+    <ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="single" [designatedTotal]="totalValue">
+    </ngx-charts-pie-grid>
+
+
     <div class="card highscore__table table__box-shadow">
         <table>
             <thead class="padding-vertical--sm">
@@ -14,23 +16,25 @@
                 Place
             </th>
             <th>
-                Name
-            </th>
-            <th>
                 Score
             </th>
             </thead>
             <tbody>
-            <tr *ngFor="let score of scores; let i = index;" class="table__cell--highlighted">
+            <tr *ngFor="let score of scores; let i = index;"
+                class="table__cell--highlighted"
+                [class.own-user]="score.email">
                 <td>
                     <div fxLayoutAlign="center center">
                         <button mat-mini-fab color="primary">
-                            {{i + 1 }}
+                            {{score.rank}}
                         </button>
                     </div>
                 </td>
-                <td>{{score.user_id.$oid}}</td>
-                <td>{{score.points}}</td>
+                <td>
+                    <div fxLayoutAlign="center center">
+                        {{score.points}}
+                    </div>
+                </td>
             </tr>
             </tbody>
         </table>

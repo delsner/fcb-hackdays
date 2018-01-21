@@ -1,30 +1,49 @@
-<div class="start__top-image" fxLayoutAlign="center center">
-    <div class="start__top-header">
-        <h1>3 Steps To Win Your Jersey!</h1>
+<div class="page__top-image start__top-image" fxLayoutAlign="center center">
+    <div class="page__top-header">
+        <p>
+            3 Steps To Win Your Jersey!
+        </p>
     </div>
 </div>
 
-<div fxLayout="column">
-    <div *ngFor="let step of steps; let i = index;"
-         class="start__container"
-         fxLayout="row"
-         fxLayoutAlign="start center">
-        <div>
-            <div class="start__number" fxLayoutAlign="center center">
-                {{i + 1}}
+<div class="start-content" fxLayoutAlign="center center" fxLayout="column">
+    <div fxLayout="column" class="full-width full-height padding--md">
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxLayoutAlign="left left">
+                <span class="start__number">1</span>
+            </div>
+            <div fxLayoutAlign="start center" class="margin-left--sm">
+                Show us how much you know about FC Bayern within 60 seconds.
             </div>
         </div>
-        <div class="start__content padding-horizontal--md">
-            {{step}}
+
+
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxLayoutAlign="left left">
+                <span class="start__number">2</span>
+            </div>
+            <div fxLayoutAlign="start center" class="margin-left--sm">
+                Compete against players from all over the world .
+            </div>
+        </div>
+
+
+        <div fxLayout="row" fxFlex class="padding--md">
+            <div fxLayoutAlign="left left">
+                <span class="start__number">3</span>
+            </div>
+            <div fxLayoutAlign="start center" class="margin-left--sm">
+                Rank #1 and win a <b class="text-red">&nbsp;FC Bayern jersey</b> - shipped by <b class="text-yellow">&nbsp;DHL</b>!
+            </div>
         </div>
     </div>
-</div>
 
-<div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
-    <button (click)="checkParticipation()"
-            mat-raised-button
-            color="warn">
-        <mat-icon>videogame_asset</mat-icon>
-        <b>GO!</b>
-    </button>
+    <div class="start__actions" fxLayout="column" fxLayoutAlign="center center">
+        <button (click)="checkParticipation()"
+                mat-raised-button
+                color="warn">
+            <b>GO!</b>
+        </button>
+    </div>
+
 </div>

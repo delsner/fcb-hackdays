@@ -2,41 +2,7 @@
 
 .question__top-image {
     height: 30vh;
-    width: 100%;
-    position: relative;
     background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    &::after {
-        content: "";
-        background-color: $primary;
-        opacity: 0.4;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: 2;
-    }
-}
-
-.question__top-header {
-    color: $light-font-color;
-    z-index: 3;
-    text-align: center;
-    font-weight: $font-bold;
-    padding: $unit-md;
-
-    h1 {
-        font-size: $font-size-xlarge;
-        text-transform: uppercase;
-    }
-    p {
-        font-size: $font-regular;
-    }
 }
 
 .mat-figure {
@@ -54,11 +20,8 @@
 }
 
 .answer-card {
-    height: 150px;
+    height: 80px;
     cursor: pointer;
     background-color: $primary;
     color: $light-font-color;
-    &:hover {
-        opacity: 0.5;
-    }
 }

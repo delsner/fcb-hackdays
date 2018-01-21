@@ -16,24 +16,18 @@ export class ChallengeComponent implements OnInit, OnDestroy {
 
     public quiz;
 
-    private challengeSub: Subscription;
-
-    constructor(private quizService: QuizService,
-                public dialog: MatDialog,
-                private router: Router) {
+    constructor(private quizService: QuizService) {
 
     }
 
     ngOnInit() {
-        // TODO fix n
-        this.challengeSub = this.quizService.getLatestQuiz().subscribe(
-            (result) => {
-                this.quiz = result;
+        this.quizService.quiz.subscribe(
+            (quiz) => {
+                this.quiz = quiz;
             });
     }
 
     ngOnDestroy() {
-        this.challengeSub.unsubscribe();
     }
 
     public onSubmittedChallenge() {

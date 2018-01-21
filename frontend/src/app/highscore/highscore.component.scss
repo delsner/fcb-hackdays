@@ -4,7 +4,8 @@
     height: 30vh;
     width: 100%;
     position: relative;
-    background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
+    background: url("/assets/images/fcb_landing.jpg") no-repeat;
+    background-position: center 10%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -13,7 +14,7 @@
     &::after {
         content: "";
         background-color: $primary;
-        opacity: 0.4;
+        opacity: 0.7;
         top: 0;
         left: 0;
         bottom: 0;
@@ -40,7 +41,7 @@
 }
 
 .highscore__table {
-    width: 500px;
+    width: 400px;
     max-width: 100%;
 
     table {
@@ -48,6 +49,13 @@
         border-spacing: 0;
         border: none;
         width: 100%;
+
+        thead {
+            background-color: $light-gray-bg;
+            th{
+                height: 50px;
+            }
+        }
 
         tr {
             border-bottom: 1px solid rgba(0, 0, 0, .12);
@@ -61,5 +69,9 @@
                 padding: 0 $unit-sm;
             }
         }
+    }
+
+    .own-user {
+        background-color: $accent;
     }
 }
