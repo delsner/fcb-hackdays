@@ -25,18 +25,7 @@ export class AppComponent {
             if (user) {
                 this.menuItems = [
                     {
-                        name: 'Start',
-                        route: 'start'
-                    }, {
-                        name: 'Quiz',
-                        route: 'quiz'
-                    },
-                    {
-                        name: 'Highscore',
-                        route: 'highscore'
-                    },
-                    {
-                        name: 'Terms',
+                        name: 'Terms of Participation',
                         route: 'terms'
                     }
                 ];
