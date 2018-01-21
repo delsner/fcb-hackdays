@@ -18,6 +18,13 @@ import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {TermsComponent} from "./terms/terms.component";
 import {PackageImageUploadComponent} from "./package-image-upload/package-image-upload.component";
+import {AccountComponent} from './account/account.component';
+import {CategoryComponent} from './category/category.component';
+import {GameComponent} from './category/game/game.component';
+import {DhlComponent} from './category/dhl/dhl.component';
+import {SocialComponent} from './category/social/social.component';
+import {DrawComponent} from './category/social/draw/draw.component';
+import { CommunityComponent } from './community/community.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +42,14 @@ export function HttpLoaderFactory(http: HttpClient) {
         ChallengeSubmitDialog,
         HighscoreComponent,
         TermsComponent,
-        PackageImageUploadComponent
+        PackageImageUploadComponent,
+        AccountComponent,
+        CategoryComponent,
+        GameComponent,
+        DhlComponent,
+        SocialComponent,
+        DrawComponent,
+        CommunityComponent
     ],
     imports: [
         BrowserModule,
