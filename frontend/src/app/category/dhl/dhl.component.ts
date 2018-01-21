@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Quest} from "../../shared/components/quest-log/quest-log.component";
 
 @Component({
-  selector: 'app-dhl',
-  templateUrl: './dhl.component.html',
-  styleUrls: ['./dhl.component.scss']
+    selector: 'dhl',
+    templateUrl: './dhl.component.html',
+    styleUrls: ['./dhl.component.scss']
 })
 export class DhlComponent implements OnInit {
+    public quests: Quest[] = [{
+        name: 'Image Upload',
+        route: '../dhl/package-image-upload',
+        description: 'Image upload...'
+    }];
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

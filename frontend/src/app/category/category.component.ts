@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {EpService} from "../shared/services/ep.service";
 
 @Component({
-  selector: 'app-category',
+  selector: 'category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss']
 })

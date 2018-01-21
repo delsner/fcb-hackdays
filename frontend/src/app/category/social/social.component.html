@@ -1,8 +1,6 @@
-<mat-list>
-    <mat-list-item routerLink="../social/draw">
-        Draw something
-    </mat-list-item>
-</mat-list>
+<div class="social__container padding--md" fxLayout="column">
+    <quest-log [quests]="quests">
+    </quest-log>
+</div>
 
-<a routerLink="../account">Account</a>
-<a routerLink="../category">Category</a>
+<footer-nav></footer-nav>

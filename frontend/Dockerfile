@@ -10,6 +10,6 @@ RUN yarn install --pure-lockfile
 COPY . /app
 
 # create dist
-RUN ng build --prod 
+RUN ng build
 # RUN ng build
 
