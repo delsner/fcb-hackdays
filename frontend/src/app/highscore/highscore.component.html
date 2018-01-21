@@ -3,7 +3,7 @@
         <p>We will inform you as soon as possible!</p>
     </div>
 </div>
-<div fxLayout="column" class="padding--md" fxLayoutAlign="center center" *ngIf="single && scores">
+<div fxLayout="column" class="padding--md" fxLayoutAlign="center center" *ngIf="single && scores && scores.length >0 ">
 
     <ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="single" [designatedTotal]="totalValue">
     </ngx-charts-pie-grid>

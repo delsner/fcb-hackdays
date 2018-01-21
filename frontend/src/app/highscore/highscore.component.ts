@@ -44,11 +44,16 @@ export class HighscoreComponent implements OnInit {
                                     "value": scores[idx].points
                                 }
                             ];
-                            this.scores = scores.slice(0, 4);
-                            if (this.scores.find((s) => user.email == s.email)) {
-                                this.scores.push(scores[4]);
-                            } else {
+
+                            let minIdx = Math.min(4, scores.length);
+                            this.scores = scores.slice(0, minIdx);
+
+                            if (!this.scores.find((s) => user.email == s.email)) {
                                 this.scores.push(scores[idx]);
+                            } else {
+                                if (scores.length > 4) {
+                                    this.scores.push(scores[4]);
+                                }
                             }
                         }
                     });
