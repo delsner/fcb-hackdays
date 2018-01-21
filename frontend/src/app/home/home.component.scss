@@ -1,10 +1,11 @@
 @import '../shared/styles/main';
 
 .home__top-image {
-    height: 50vh;
+    height: 45vh;
     width: 100%;
     position: relative;
-    background: url("/assets/images/arena.png") no-repeat center center fixed;
+    background: url("/assets/images/arena.png") no-repeat;
+    background-position: center 30%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -100,4 +101,9 @@
     -ms-transform: skewY(5deg);
     -o-transform: skewY(5deg);
     transform: skewY(5deg);
+}
+
+.warning {
+    background-color: $warn;
+    color: $light-font-color;
 }
