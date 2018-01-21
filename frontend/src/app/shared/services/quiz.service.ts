@@ -47,4 +47,8 @@ export class QuizService {
     public getCurrentQuiz() {
         return this.$quiz.getValue();
     }
+
+    public cleanup() {
+        this.$quiz.next(null);
+    }
 }

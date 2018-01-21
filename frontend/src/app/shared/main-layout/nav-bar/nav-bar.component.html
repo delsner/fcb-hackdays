@@ -1,6 +1,6 @@
 <mat-toolbar>
     <div fxFlex fxLayout="row">
-        <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" routerLink="/">
+        <div fxFlex fxLayoutAlign="start center" class="cursor-pointer" (click)="leaveApp()">
             <img [src]="logoUrl" height="40">
         </div>
         <div fxFlex *ngIf="!hasSideNav">

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {AuthService} from "../shared/services/auth.service";
 import {Router} from "@angular/router";
+import {QuizService} from "../shared/services/quiz.service";
 
 @Component({
     selector: 'home',
@@ -15,8 +16,8 @@ export class HomeComponent implements OnInit {
     public termsAccepted: boolean = false;
 
     constructor(private authService: AuthService,
+                private quizService: QuizService,
                 private router: Router) {
-        this.authService.logout();
     }
 
     ngOnInit() {

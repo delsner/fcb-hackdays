@@ -1,4 +1,4 @@
-import { TranslateService } from '@ngx-translate/core';
+import {TranslateService} from '@ngx-translate/core';
 import {Component, Input, OnInit} from '@angular/core';
 import {NavigationItem} from "../main-layout.types";
 
@@ -27,4 +27,9 @@ export class NavBarComponent implements OnInit {
     ngOnInit() {
     }
 
+    public leaveApp() {
+        localStorage.removeItem('dhl-jwt');
+        window.location.href = window.location.href;
+        window.location.reload();
+    }
 }

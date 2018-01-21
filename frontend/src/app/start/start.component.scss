@@ -45,3 +45,14 @@
         margin: auto;
     }
 }
+
+
+.text-red {
+    color: $warn;
+    font-weight: $font-bold
+}
+
+.text-yellow {
+    color: $accent;
+    font-weight: $font-bold
+}
