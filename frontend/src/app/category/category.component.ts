@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EpService} from "../shared/services/ep.service";
 
 @Component({
   selector: 'app-category',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private epService: EpService) { }
 
   ngOnInit() {
   }

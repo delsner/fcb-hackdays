@@ -43,7 +43,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         ChallengeComponent,
         QuestionComponents,
         ChallengeSubmitDialog,
-        NavigationBubblesComponent,
         HighscoreComponent,
         TermsComponent,
         PackageImageUploadComponent,
