@@ -9,12 +9,12 @@ import {Quest} from "../../shared/components/quest-log/quest-log.component";
 export class DhlComponent implements OnInit {
     public quests: Quest[] = [
         {
-            name: 'Send a packet with DHL',
+            name: 'Send a parcel with DHL',
             route: '../dhl/package-image-upload',
             points: 5
         },
         {
-            name: 'Buy your FC Bayern jersey',
+            name: 'Buy a ticket for the Allianz Arena',
             route: '.',
             points: 20
         },
