@@ -7,11 +7,12 @@ import {Quest} from "../../shared/components/quest-log/quest-log.component";
     styleUrls: ['./dhl.component.scss']
 })
 export class DhlComponent implements OnInit {
-    public quests: Quest[] = [{
-        name: 'Send a packet with DHL',
-        route: '../dhl/package-image-upload',
-        points: 5
-    },
+    public quests: Quest[] = [
+        {
+            name: 'Send a packet with DHL',
+            route: '../dhl/package-image-upload',
+            points: 5
+        },
         {
             name: 'Buy your FC Bayern jersey',
             route: '.',

@@ -9,7 +9,7 @@ import {Quest} from "../../shared/components/quest-log/quest-log.component";
 export class GameComponent implements OnInit {
     public quests: Quest[] = [{
         name: 'Live Event: FC Bayern Quiz',
-        route: '/',
+        route: 'show-case-demo',
         points: 10
     }, {
         name: 'Bet result FCB vs. TSG',

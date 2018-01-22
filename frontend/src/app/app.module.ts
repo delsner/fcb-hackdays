@@ -28,6 +28,9 @@ import { CommunityComponent } from './community/community.component';
 import {EpService} from "./shared/services/ep.service";
 import {ImageUploadSuccessDialog} from "./category/dhl/package-image-upload/success/image-upload-success.dialog";
 import { AgmCoreModule } from '@agm/core';
+import { ShowCaseDemoComponent } from './category/game/show-case-demo/show-case-demo.component';
+import { DemoQuizComponent } from './category/game/demo-quiz/demo-quiz.component';
+import { DemoQuestionComponent } from './category/game/demo-question/demo-question.component';
 
 
 
@@ -54,7 +57,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         SocialComponent,
         DrawComponent,
         CommunityComponent,
-        ImageUploadSuccessDialog
+        ImageUploadSuccessDialog,
+        ShowCaseDemoComponent,
+        DemoQuizComponent,
+        DemoQuestionComponent
     ],
     imports: [
         BrowserModule,

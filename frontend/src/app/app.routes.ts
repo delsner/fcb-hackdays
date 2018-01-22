@@ -14,6 +14,7 @@ import {GameComponent} from "./category/game/game.component";
 import {DhlComponent} from "./category/dhl/dhl.component";
 import {SocialComponent} from "./category/social/social.component";
 import {DrawComponent} from "./category/social/draw/draw.component";
+import {ShowCaseDemoComponent} from "./category/game/show-case-demo/show-case-demo.component";
 
 
 export const ROUTES: Routes = [
@@ -27,6 +28,7 @@ export const ROUTES: Routes = [
         {path: 'account', component: AccountComponent, data: {title: 'Account'}},
         {path: 'category', component: CategoryComponent, data: {title: 'Category'}},
         {path: 'game', component: GameComponent, data: {title: 'Game'}}, // quiz -> redirect to home
+        {path: 'game/show-case-demo', component: ShowCaseDemoComponent, data: {title: 'Quiz'}}, // quiz -> redirect to home
         {path: 'dhl', component: DhlComponent, data: {title: 'DHL'}},
         {path: 'dhl/package-image-upload', component: PackageImageUploadComponent, data: {title: 'Image Upload'}},
         {path: 'social', component: SocialComponent, data: {title: 'Social'}},

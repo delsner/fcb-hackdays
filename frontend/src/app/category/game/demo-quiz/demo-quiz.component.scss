@@ -1,0 +1,22 @@
+@import "../../../shared/styles/main";
+
+@media (min-width: 1025px) {
+    .question-text {
+        text-align: center;
+    }
+    .mat-grid-list {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 60px;
+    height: 25px;
+
+    .mat-progress-bar-fill::after {
+        background-color: rgb(241, 203, 48);
+    }
+
+}

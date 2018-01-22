@@ -1,0 +1,27 @@
+@import "../../../shared/styles/main";
+
+.question__top-image {
+    height: 30vh;
+    background: url("/assets/images/fcb_landing.jpg") no-repeat center center fixed;
+}
+
+.mat-figure {
+
+    background-color: lightgrey;
+
+    .mat-button {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.answer-button {
+    background-color: lightgrey;
+}
+
+.answer-card {
+    height: 80px;
+    cursor: pointer;
+    background-color: $primary;
+    color: $light-font-color;
+}
