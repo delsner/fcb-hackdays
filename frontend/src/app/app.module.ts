@@ -17,6 +17,21 @@ import {ChallengeComponent} from "./challenge/challenge.component";
 import {ChallengeSubmitDialog} from "./dialog/challenge-submit-dialog";
 import {HighscoreComponent} from "./highscore/highscore.component";
 import {TermsComponent} from "./terms/terms.component";
+import {PackageImageUploadComponent} from "./category/dhl/package-image-upload/package-image-upload.component";
+import {AccountComponent} from './account/account.component';
+import {CategoryComponent} from './category/category.component';
+import {GameComponent} from './category/game/game.component';
+import {DhlComponent} from './category/dhl/dhl.component';
+import {SocialComponent} from './category/social/social.component';
+import {DrawComponent} from './category/social/draw/draw.component';
+import { CommunityComponent } from './community/community.component';
+import {EpService} from "./shared/services/ep.service";
+import {ImageUploadSuccessDialog} from "./category/dhl/package-image-upload/success/image-upload-success.dialog";
+import { AgmCoreModule } from '@agm/core';
+import { ShowCaseDemoComponent } from './category/game/show-case-demo/show-case-demo.component';
+import { DemoQuizComponent } from './category/game/demo-quiz/demo-quiz.component';
+import { DemoQuestionComponent } from './category/game/demo-question/demo-question.component';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -33,7 +48,19 @@ export function HttpLoaderFactory(http: HttpClient) {
         QuestionComponents,
         ChallengeSubmitDialog,
         HighscoreComponent,
-        TermsComponent
+        TermsComponent,
+        PackageImageUploadComponent,
+        AccountComponent,
+        CategoryComponent,
+        GameComponent,
+        DhlComponent,
+        SocialComponent,
+        DrawComponent,
+        CommunityComponent,
+        ImageUploadSuccessDialog,
+        ShowCaseDemoComponent,
+        DemoQuizComponent,
+        DemoQuestionComponent
     ],
     imports: [
         BrowserModule,
@@ -47,12 +74,16 @@ export function HttpLoaderFactory(http: HttpClient) {
                 deps: [HttpClient]
             }
         }),
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAJTE18WlMZsHKSjfoiq3Kkobzv0R6QosI'
+        }),
         SharedModule,
     ],
     entryComponents: [
         ChallengeSubmitDialog,
+        ImageUploadSuccessDialog
     ],
-    providers: [QuizService],
+    providers: [QuizService, EpService],
     bootstrap: [
         AppComponent]
 })

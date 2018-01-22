@@ -1,4 +1,4 @@
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
@@ -27,6 +27,8 @@ import {SocketService} from "./services/socket.service";
 import {AuthGuard} from "./services/auth.guard";
 import {QuizService} from "./services/quiz.service";
 import {QuizGuard} from "./services/quiz.guard";
+import {QuestLogComponent} from './components/quest-log/quest-log.component';
+import {FooterNavComponent} from './components/footer-nav/footer-nav.component';
 
 @NgModule({
     imports: [
@@ -79,9 +81,13 @@ import {QuizGuard} from "./services/quiz.guard";
         TranslateModule,
         // custom modules
         MainLayoutModule,
-        NgxChartsModule
+        NgxChartsModule,
+        QuestLogComponent,
+        FooterNavComponent
     ],
-    declarations: [],
+    declarations: [
+        QuestLogComponent,
+        FooterNavComponent],
     entryComponents: [],
     providers: [
         AuthService,

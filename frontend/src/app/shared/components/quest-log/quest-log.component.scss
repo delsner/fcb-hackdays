@@ -1,0 +1,40 @@
+@import "../../styles/main";
+
+
+.quest-log__top-image {
+    height: 20vh;
+    background: no-repeat;
+}
+
+
+.quest-log__table {
+    width: 100%;
+    max-width: 100%;
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: none;
+        width: 100%;
+
+        thead {
+            background-color: $light-gray-bg;
+            th {
+                height: 50px;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid rgba(0, 0, 0, .12);
+            height: 48px;
+            text-align: left;
+            th {
+                color: rgba(0, 0, 0, .54);
+            }
+            th, td  {
+                border: none;
+                padding: 0 $unit-sm;
+            }
+        }
+    }
+}

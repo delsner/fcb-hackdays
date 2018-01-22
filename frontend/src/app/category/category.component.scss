@@ -1,0 +1,38 @@
+.nav-title {
+    position: relative;
+}
+
+.nav-card {
+    margin: 22px auto 0;
+    padding: 32px 16px;
+    width: 80%;
+    background-size: cover;
+    color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    .layer {
+        background-color: rgba(42, 42, 38, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+#nav-1 {
+    background-image: url('/assets/images/social.jpg');
+}
+
+#nav-2 {
+    background-image: url('/assets/images/game.jpg');
+}
+
+#nav-3 {
+    background-image: url('/assets/images/dhl.jpg');
+}

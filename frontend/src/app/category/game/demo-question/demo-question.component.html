@@ -1,0 +1,32 @@
+<div class="page__top-image question__top-image" fxLayoutAlign="center center">
+    <div class="page__top-header">
+        <p>
+            {{question.text}}
+        </p>
+    </div>
+</div>
+
+<!-- <div class="question__top-image" fxLayoutAlign="center center">
+    <div class="question__top-header">
+        <h1>{{question.text}}</h1>
+    </div>
+</div> -->
+
+<div fxLayout="column" class="full-width padding--md">
+    <div fxLayout="row" fxFlex class="padding--xs">
+        <div class="answer-card card padding--sm" (click)="submitAnswer(0)" fxFlex fxLayoutAlign="center center">
+            {{question.answers[0].text}}
+        </div>
+        <div class="answer-card card padding--sm margin-left--xs" (click)="submitAnswer(1)" fxFlex fxLayoutAlign="center center">
+            {{question.answers[1].text}}
+        </div>
+    </div>
+    <div fxLayout="row" fxFlex class="padding--xs">
+        <div class="answer-card card padding--sm" (click)="submitAnswer(2)" fxFlex fxLayoutAlign="center center">
+            {{question.answers[2].text}}
+        </div>
+        <div class="answer-card card padding--sm margin-left--xs" (click)="submitAnswer(3)" fxFlex fxLayoutAlign="center center">
+            {{question.answers[3].text}}
+        </div>
+    </div>
+</div>

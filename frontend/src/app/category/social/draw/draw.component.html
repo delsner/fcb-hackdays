@@ -1,0 +1,16 @@
+<agm-map 
+    [latitude]="lat" 
+    [longitude]="lng"
+    [mapDraggable]='mapDraggable'
+    [zoom]='zoom'>
+    <agm-marker [latitude]="lat" [longitude]="lng" iconUrl="assets/images/map_marker.png">
+        <agm-info-window>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <b>FCBayern Hackdays</b><br/>
+                <button color="warn" mat-raised-button (click)="onJoin($event)">Join Event</button>
+            </div>
+        </agm-info-window>
+    </agm-marker>
+</agm-map>
+      
+<footer-nav></footer-nav>
