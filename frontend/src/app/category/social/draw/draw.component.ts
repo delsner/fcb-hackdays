@@ -20,7 +20,7 @@ export class DrawComponent implements OnInit {
   }
 
   onJoin() {
-    this.epService.add(5);
+    this.epService.add(10);
     this.router.navigateByUrl('community/account');
   }
 

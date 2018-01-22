@@ -28,7 +28,7 @@ export class PackageImageUploadComponent {
     }
 
     addEps() {
-        this.epService.add(30);
+        this.epService.add(5);
 
 
         let dialogRef = this.dialog.open(ImageUploadSuccessDialog, {
