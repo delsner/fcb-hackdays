@@ -8,10 +8,21 @@ import {Quest} from "../../shared/components/quest-log/quest-log.component";
 })
 export class DhlComponent implements OnInit {
     public quests: Quest[] = [{
-        name: 'Image Upload',
+        name: 'Send a packet with DHL',
         route: '../dhl/package-image-upload',
-        description: 'Image upload...'
-    }];
+        points: 5
+    },
+        {
+            name: 'Buy your FC Bayern jersey',
+            route: '.',
+            points: 20
+        },
+        {
+            name: 'Like the FC Bayern Facebook page',
+            route: '.',
+            points: 5
+        },
+    ];
 
     constructor() {
     }

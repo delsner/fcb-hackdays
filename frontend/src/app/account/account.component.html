@@ -8,7 +8,15 @@
 
     <div class="account__jersey margin--sm" fxLayoutAlign="center center" fxLayout="column">
         <img class="account__jersey-img" src="/assets/images/fcb_trikot.png"/>
-        <mat-progress-bar class="account__progress" mode="determinate" value="40"></mat-progress-bar>
+
+        <div id="progress-bar-content">
+            <mat-progress-bar class="progress-bar" color="accent" id mode="determinate" [value]="eps"></mat-progress-bar>
+            <div class="progress-caption">
+                {{eps}}/100
+            </div>
+
+        </div>
+
     </div>
 
     <div class="account__actions" fxLayoutAlign="center center">

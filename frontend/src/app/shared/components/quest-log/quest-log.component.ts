@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DomSanitizer} from "@angular/platform-browser";
 
 export interface Quest {
     name: string;
     route: string;
-    description: string;
+    points: number;
 }
 
 @Component({
@@ -13,11 +14,17 @@ export interface Quest {
 })
 export class QuestLogComponent implements OnInit {
     @Input() public quests: Quest[];
+    @Input() public title: string = '';
+    @Input() public imageUrl: string = '';
 
-    constructor() {
+    constructor(public sanitizer: DomSanitizer) {
     }
 
     ngOnInit() {
+    }
+
+    public getImgUrl() {
+        return this.sanitizer.bypassSecurityTrustStyle(`url(${this.imageUrl})`);
     }
 
 }

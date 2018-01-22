@@ -8,9 +8,31 @@
     background-size: cover;
 }
 
-.account__progress {
-    margin: $unit-sm 0;
+#progress-bar-content {
+    margin: $unit-sm 0 $unit-lg 0;
     height: 20px;
-    width: 200px;
+    width: 250px;
     max-width: 100%;
+    position: relative;
+    .progress-bar {
+        position: relative;
+    }
+    .progress-caption {
+        position: absolute;
+        top: 15px;
+        left: 95px;
+        z-index: 99;
+        font-weight: $font-bold;
+    }
+}
+
+.mat-progress-bar {
+    width: 87%;
+    height: 50px;
+    border-radius: 12px;
+    margin: auto;
+
+    .mat-progress-bar-fill::after {
+        background-color: rgb(241, 203, 48) !important;
+    }
 }
