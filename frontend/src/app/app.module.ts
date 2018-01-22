@@ -27,6 +27,7 @@ import {DrawComponent} from './category/social/draw/draw.component';
 import { CommunityComponent } from './community/community.component';
 import {EpService} from "./shared/services/ep.service";
 import {ImageUploadSuccessDialog} from "./category/dhl/package-image-upload/success/image-upload-success.dialog";
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -66,6 +67,9 @@ export function HttpLoaderFactory(http: HttpClient) {
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
+        }),
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAJTE18WlMZsHKSjfoiq3Kkobzv0R6QosI'
         }),
         SharedModule,
     ],
