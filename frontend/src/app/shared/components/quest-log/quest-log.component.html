@@ -1,30 +1,42 @@
-<div class="card quest-log__table table__box-shadow">
-    <table>
-        <thead class="padding-vertical--sm">
-        <th>
-            No.
-        </th>
-        <th>
-            Name
-        </th>
-        </thead>
-        <tbody>
-        <tr *ngFor="let quest of quests; let i = index;"
-            class="table__cell--highlighted"
-            [routerLink]="quest.route">
-            <td>
-                <div fxLayoutAlign="center center">
-                    <button mat-mini-fab color="primary">
-                        {{i + 1}}
-                    </button>
-                </div>
-            </td>
-            <td>
-                <div fxLayoutAlign="center center">
-                    {{quest.name}}
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="page__top-image quest-log__top-image"
+     fxLayoutAlign="center center"
+     [style.background-image]="getImgUrl()">
+    <div class="page__top-header">
+        <h1>
+            {{title}}
+        </h1>
+    </div>
+</div>
+
+<div class="padding--md">
+    <div class="card quest-log__table table__box-shadow">
+        <table>
+            <thead class="padding-vertical--sm">
+            <th class="text-left padding-left--xs">
+                Name
+            </th>
+            <th class="padding-right--xs">
+                Points
+            </th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let quest of quests; let i = index;"
+                class="table__cell--highlighted"
+                [routerLink]="quest.route">
+                <td>
+                    <div fxLayoutAlign="begin center" class="padding-left--xs">
+                        {{quest.name}}
+                    </div>
+                </td>
+                <td>
+                    <div fxLayoutAlign="center center" class="padding-right--xs">
+                        <button mat-mini-fab color="warn">
+                            {{quest.points}}
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

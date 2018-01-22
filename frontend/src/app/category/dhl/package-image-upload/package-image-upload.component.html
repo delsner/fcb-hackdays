@@ -1,10 +1,18 @@
-<input type="file" style="display: none" accept="image/*" capture="camera" #fileInput/>
-<button (click)="fileInput.click(); addEps()" style="width: 100px; height: 60px;"
-        mat-raised-button
-        color="warn">
-    <b>Scan!</b>
-</button>
+<div class="page__top-image"
+     fxLayoutAlign="center center" style="background-image: url('/assets/images/dhl.jpg'); height: 40vh;">
+    <div class="page__top-header">
+        <h1>
+            Scan Parcel
+        </h1>
+    </div>
+</div>
 
-
-<a routerLink="../account">Account</a>
-<a routerLink="../category">Category</a>
+<div class="full-width padding--lg" fxLayoutAlign="center center">
+    <input type="file" style="display: none" accept="image/*" capture="camera" #fileInput/>
+    <button (click)="fileInput.click(); addEps()" style="width: 100px; height: 100px; border-radius: 50%;"
+            mat-raised-button
+            color="warn">
+        <b>Scan</b>
+    </button>
+</div>
+<footer-nav></footer-nav>
