@@ -1,0 +1,29 @@
+@import "../../styles/main";
+
+$footer-box-shadow: 0px 2px 6px 0px black;
+$footer-z-index: 5;
+$footer-height: 60px;
+$button-width: 100px;
+$button-disabled-bg-color: #e0e0e0;
+
+.footer-nav {
+    width: 100%;
+    height: $footer-height;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $light-gray-bg;
+    box-shadow: $footer-box-shadow;
+    -moz-box-shadow: $footer-box-shadow;
+    -webkit-box-shadow: $footer-box-shadow;
+    z-index: $footer-z-index;
+
+    .footer-nav__button {
+        width: $button-width;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        font-size: $font-size-regular;
+        cursor: pointer;
+    }
+}

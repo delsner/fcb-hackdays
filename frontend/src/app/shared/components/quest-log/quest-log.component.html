@@ -1,0 +1,30 @@
+<div class="card quest-log__table table__box-shadow">
+    <table>
+        <thead class="padding-vertical--sm">
+        <th>
+            No.
+        </th>
+        <th>
+            Name
+        </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let quest of quests; let i = index;"
+            class="table__cell--highlighted"
+            [routerLink]="quest.route">
+            <td>
+                <div fxLayoutAlign="center center">
+                    <button mat-mini-fab color="primary">
+                        {{i + 1}}
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div fxLayoutAlign="center center">
+                    {{quest.name}}
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

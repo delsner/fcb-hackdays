@@ -1,3 +1,22 @@
-Account
+<div class="account__container padding--sm" fxLayout="column">
+    <div class="account__header">
+        <h1 class="text-center">
+            Hi Chris, <br/>
+            you're almost there!
+        </h1>
+    </div>
 
-<a routerLink="/community/category" mat-raised-button>Earn points</a>
+    <div class="account__jersey margin--sm" fxLayoutAlign="center center" fxLayout="column">
+        <img class="account__jersey-img" src="/assets/images/fcb_trikot.png"/>
+        <mat-progress-bar class="account__progress" mode="determinate" value="40"></mat-progress-bar>
+    </div>
+
+    <div class="account__actions" fxLayoutAlign="center center">
+        <a routerLink="/community/category" mat-raised-button color="warn">
+            <mat-icon>dashboard</mat-icon>
+            Earn points</a>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,16 @@
+@import "../shared/styles/main";
+
+.account__jersey-img {
+    height: 250px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.account__progress {
+    margin: $unit-sm 0;
+    height: 20px;
+    width: 200px;
+    max-width: 100%;
+}
