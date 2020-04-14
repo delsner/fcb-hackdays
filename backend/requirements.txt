@@ -4,7 +4,7 @@ Flask==0.12.2
 Flask-JWT-Simple==0.0.3
 itsdangerous==0.24
 Jinja2==2.10
-MarkupSafe==1.0
+MarkupSafe==1.1.1
 pathtools==0.1.2
 PyJWT==1.5.3
 PyYAML==3.12
